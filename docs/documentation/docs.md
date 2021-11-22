@@ -1670,8 +1670,8 @@ Your plugin may send these messages to Sourcetrail.
 
 | Message | Parameters | Description
 | --- | --- | ---
-| `setActiveToken` | fileLocation: string<br />row: integer<br />column: integer | Tells Sourcetrail to shift focus to the token located at the given position. Note that fileLocation is the absolute path and name of the target file.
-| `createCDBProject` | cdbPath: string<br />headerPaths: string | If your plugin can provide a Compilation Database this message can prompt Sourcetrail to import it and display an appropriate dialog for the user. headerPaths is a list of the base project's header include paths. Separate the single paths using the divider token. You can add as many paths as you need.
+| `setActiveToken` | `fileLocation: string`<br />`row: integer`<br />`column: integer` | Tells Sourcetrail to shift focus to the token located at the given position. Note that fileLocation is the absolute path and name of the target file.
+| `createCDBProject` | `cdbPath: string`<br />`headerPaths: string` | If your plugin can provide a Compilation Database this message can prompt Sourcetrail to import it and display an appropriate dialog for the user. headerPaths is a list of the base project's header include paths. Separate the single paths using the divider token. You can add as many paths as you need.
 | `ping` |  | Your plugin may send this message to Sourcetrail to tell it it's listening.
 
 # Frequently Asked Questions
