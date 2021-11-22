@@ -242,3 +242,94 @@ The Sourcetrail team wishes you a good start with our product, lots of saved tim
 
 > **Tasks:**
 > * Start exploring and have fun!
+
+
+# Installation
+
+## Windows
+
+Download and open the zip file and extract its contents into a temporary folder of your choice. Run the `setup.exe` and go through the wizard. You can now launch Sourcetrail from your start menu.
+
+## macOS
+Download and open the Sourcetrail.dmg file and drag Sourcetrail.app into the applications folder. You can now launch Sourcetrail from your Applications.
+
+!["Installation macOS"](img/installation_mac.png "Installation macOS")
+
+## Linux
+
+### Tarball
+
+Download the `.tar.gz` file and extract it. To start Sourcetrail run the `Sourcetrail.sh` script. Sourcetrail creates a folder `~/.config/sourcetrail` at the first run, this is the folder for Sourcetrail settings.
+
+#### Install
+To install Sourcetrail run the `install.sh` script with `sudo`. It will install Sourcetrail to `/opt/sourcetrail` and create the `/usr/bin/sourcetrail` symlink.
+
+#### Uninstall
+To uninstall Sourcetrail run the `/opt/sourcetrail/uninstall.sh` script with `sudo`.
+
+### AppImage
+
+Download the `.AppImage` file. Give it permission to execute with `chmod a+x` or via the context menu. To start Sourcetrail double click it or execute it from the Terminal. Sourcetrail creates a folder `~/.config/sourcetrail` at the first run, this is the folder for Sourcetrail settings.
+
+For more information on AppImages please visit [appimage.org](https://appimage.org/).
+
+## Data folder
+
+The data folder holds certain files that are used by Sourcetrail to run the program. After following the [installation instructions](#installation) the data folder should be located in the following locations on your platform.
+
+| Platform | Location
+| Windows | `C:/Users/You/AppData/Local/Coati Software/Sourcetrail _(used for dynamic data and settings)_ `install_directory/Coati Software/Sourcetrail/data` _(used for static app data)_
+| macOS | `~/Library/Application Support/Sourcetrail`
+| Linux | `~/.config/sourcetrail`
+
+## Finding System Header Locations
+
+### Windows
+
+These files usually ship with your compiler. For the Visual Studio IDE the system headers can be found at:
+`&lt;path_to_visual_studio&gt;/VC/include/`
+If you don't use the Visual Studio IDE you can also try to find your system headers in a subdirectory of:
+`C:/Program Files (x86)/Windows Kits/`
+
+### macOS
+
+Run this command in your terminal:
+`gcc -x c++ -v -E /dev/null`
+You will find the header search paths your compiler uses in the output between these two lines:
+`#include <...> search starts here:<br />.<br />.<br />.<br />End of search list.`
+
+### Linux
+
+`gcc -x c++ -v -E /dev/null`
+or
+`clang -x c++ -v -E /dev/null`
+You will find the header search paths your compiler uses in the output between these two lines:
+`#include <...> search starts here:<br />.<br />.<br />.<br />End of search list.`
+
+
+## Finding Java Runtime Library Location
+
+The current version of Sourcetrail requires an installation of the Java 8 runtime environment to index any Java project. Make sure that Sourcetrail and your JRE share the same kind or architecture (a 32 bit Sourcetrail requires a 32 bit JRE). To locate the required library file, please refer to the applicable description below.
+
+### Windows
+
+The Java Runtime Library (called `jvm.dll`) can be found inside of your JRE install folder and looks like this:
+`&lt;path_to_jre&gt;/bin/client/jvm.dll`
+
+### macOS
+
+The Java Runtime Library (called `libjli.dylib`) can be found inside of your JDK install folder. Run the following command in your terminal to find the location of your default Java installation:
+`/usr/libexec/java_home`
+
+This should give you a path looking like this:
+`/Library/Java/JavaVirtualMachines/&lt;jdk_version&gt;/Contents/Home`
+
+The `"libjli.dylib"` should be available at:
+`/Library/Java/JavaVirtualMachines/&lt;jdk_version&gt;/Contents/MacOS/libjli.dylib`
+
+Insert the full path to `libjli.dylib` into the **Java Path** setting in the [Preferences Window](#preferences-window).
+
+### Linux
+
+The Java Runtime Library (called `libjvm.so`) can be found inside of your JRE install folder and looks like this:
+`&lt;path_to_jre&gt;/lib/&lt;arch&gt;/server/libjvm.so`
