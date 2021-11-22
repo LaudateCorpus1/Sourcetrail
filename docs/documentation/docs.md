@@ -192,7 +192,7 @@ The [graph visualization](#graph-view) displays the currently selected symbol in
 The different node and edge types are also displayed using different colors. The default color scheme uses this convention:
 
 | Color | Node | Edge
-| - | - | -
+| --- | --- | ---
 | gray | types and classes | type use
 | yellow | functions and methods | calls
 | blue | variables and fields | variable access
@@ -278,7 +278,8 @@ For more information on AppImages please visit [appimage.org](https://appimage.o
 The data folder holds certain files that are used by Sourcetrail to run the program. After following the [installation instructions](#installation) the data folder should be located in the following locations on your platform.
 
 | Platform | Location
-| Windows | `C:/Users/You/AppData/Local/Coati Software/Sourcetrail _(used for dynamic data and settings)_ `install_directory/Coati Software/Sourcetrail/data` _(used for static app data)_
+| --- | ---
+| Windows | `C:/Users/You/AppData/Local/Coati Software/Sourcetrail` _(used for dynamic data and settings)_ `install_directory/Coati Software/Sourcetrail/data` _(used for static app data)_
 | macOS | `~/Library/Application Support/Sourcetrail`
 | Linux | `~/.config/sourcetrail`
 
@@ -287,7 +288,7 @@ The data folder holds certain files that are used by Sourcetrail to run the prog
 ### Windows
 
 These files usually ship with your compiler. For the Visual Studio IDE the system headers can be found at:
-`&lt;path_to_visual_studio&gt;/VC/include/`
+`<path_to_visual_studio>/VC/include/`
 If you don't use the Visual Studio IDE you can also try to find your system headers in a subdirectory of:
 `C:/Program Files (x86)/Windows Kits/`
 
@@ -296,7 +297,14 @@ If you don't use the Visual Studio IDE you can also try to find your system head
 Run this command in your terminal:
 `gcc -x c++ -v -E /dev/null`
 You will find the header search paths your compiler uses in the output between these two lines:
-`#include <...> search starts here:<br />.<br />.<br />.<br />End of search list.`
+
+```
+#include <...> search starts here:
+.
+.
+.
+End of search list.
+```
 
 ### Linux
 
@@ -304,7 +312,14 @@ You will find the header search paths your compiler uses in the output between t
 or
 `clang -x c++ -v -E /dev/null`
 You will find the header search paths your compiler uses in the output between these two lines:
-`#include <...> search starts here:<br />.<br />.<br />.<br />End of search list.`
+
+```
+#include <...> search starts here:
+.
+.
+.
+End of search list.
+```
 
 
 ## Finding Java Runtime Library Location
@@ -314,7 +329,7 @@ The current version of Sourcetrail requires an installation of the Java 8 runtim
 ### Windows
 
 The Java Runtime Library (called `jvm.dll`) can be found inside of your JRE install folder and looks like this:
-`&lt;path_to_jre&gt;/bin/client/jvm.dll`
+`<path_to_jre>/bin/client/jvm.dll`
 
 ### macOS
 
@@ -322,14 +337,14 @@ The Java Runtime Library (called `libjli.dylib`) can be found inside of your JDK
 `/usr/libexec/java_home`
 
 This should give you a path looking like this:
-`/Library/Java/JavaVirtualMachines/&lt;jdk_version&gt;/Contents/Home`
+`/Library/Java/JavaVirtualMachines/<jdk_version>/Contents/Home`
 
 The `"libjli.dylib"` should be available at:
-`/Library/Java/JavaVirtualMachines/&lt;jdk_version&gt;/Contents/MacOS/libjli.dylib`
+`/Library/Java/JavaVirtualMachines/<jdk_version>/Contents/MacOS/libjli.dylib`
 
 Insert the full path to `libjli.dylib` into the **Java Path** setting in the [Preferences Window](#preferences-window).
 
 ### Linux
 
 The Java Runtime Library (called `libjvm.so`) can be found inside of your JRE install folder and looks like this:
-`&lt;path_to_jre&gt;/lib/&lt;arch&gt;/server/libjvm.so`
+`<path_to_jre>/lib/<arch>/server/libjvm.so`
