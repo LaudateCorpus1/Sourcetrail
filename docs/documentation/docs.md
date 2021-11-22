@@ -802,7 +802,7 @@ Colors are corresponding to the default color scheme.
 
 | Node Type | Image
 | --- | ---
-| **File**: Non-indexed files are files that are not part of any source group and therefore have not been indexed by Sourcetrail's indexer. Incomplete files produced errors during indexing or where part of an indexer run with errors. | !["Node File"](img/node_file.png" "Node File")
+| **File**: Non-indexed files are files that are not part of any source group and therefore have not been indexed by Sourcetrail's indexer. Incomplete files produced errors during indexing or where part of an indexer run with errors. | !["Node File"](img/node_file.png "Node File")
 | **Macro** | !["Node Macro"](img/node_macro.png "Node Macro")
 | **Namespace, Package & Module** | !["Node Namespace"](img/node_namespace.png "Node Namespace")
 | **Class & Struct**: Display their members nested, and separated by access type: public, protected, private. By default only members with edges are shown. The arrow icon allows to expand and collapse them. The number tells how many nodes are hidden. | !["Node Class"](img/node_class.png "Node Class")
