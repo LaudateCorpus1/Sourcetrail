@@ -1359,8 +1359,335 @@ Custom Command Source Groups offer the following configuration options:
 
 | Setting | Description
 | --- | ---
-| Custom Command | The command line call executed for each source file. You can pass different pre-defined parameters:<br><ul><li>**%{SOURCE_FILE_PATH}**: The path to each source file in the source group (mandatory)</li><li>**%{DATABASE_FILE_PATH}**: The path to the database of the project</li><li>**%{DATABASE_VERSION}**: The database version of the used Sourcetrail instance</li><li>**%{PROJECT_FILE_PATH}**: The path to the project file</li></ul>
+| Custom Command | The command line call executed for each source file. You can pass different pre-defined parameters:<br /><ul><li>**%{SOURCE_FILE_PATH}**: The path to each source file in the source group (mandatory)</li><li>**%{DATABASE_FILE_PATH}**: The path to the database of the project</li><li>**%{DATABASE_VERSION}**: The database version of the used Sourcetrail instance</li><li>**%{PROJECT_FILE_PATH}**: The path to the project file</li></ul>
 | Run in Parallel |  Whether files should be processed in parallel.
 | Files & Directories to Index | These paths define the files and directories that will be indexed by Sourcetrail. Provide a directory to recursively add all contained source and header files. If your project's source code resides in one location, but generated source files are kept at a different location, you will also need to add that directory. You can make use of environment variables with ${ENV_VAR}.<br /><br />For instructions on how to add paths see [Path List Box](#path-list-box).
 | Excluded Files & Directories | These paths define the files and directories that will be left out from indexing.<br />Hints:<br /><ul><li>You can use the wildcard `*` which represents characters except `\` or `/` (e.g. `src/*/test.h` matches `src/app/test.h` but does not match `src/app/widget/test.h` or `src/test.h`)</li><li>You can use the wildcard `**` which represents arbitrary characters (e.g. `src**test.h` matches `src/app/test.h` as well as `src/app/widget/test.h` or `src/test.h`)</li><li>You can make use of environment variables with `${ENV_VAR}`<br /><br />For instructions on how to add paths see [Path List Box](#path-list-box).</li></ul>
 | Source File Extensions | Define the valid extensions for source files including the dot e.g. `.ext`. Sourcetrail will only try to index files that match one of these extensions. If no extension is defined, any file extension is valid.
+
+# Code Editor Plugins
+
+In order to make Sourcetrail the perfect partner for your development workflow you can connect Sourcetrail with different code editors. You can find more information on the plugins in Sourcetrail's download package located in the folder `/ide_plugins`. Have a look at the following list of supported code editors to find out what editors are currently supported.
+
+We are eager to expand the range of supported editors, so if you can't find a plugin for the code editor you are using, please let us know by writing to [support@sourcetrail.com](mailto:support@sourcetrail.com).
+The plugins are Opensource and available on [github](https://github.com/CoatiSoftware/).
+
+**Supported Editors:**
+
+* Atom
+* CLion
+* Eclipse
+* Emacs
+* IntelliJ IDEA (PyCharm, CLion, etc.)
+* Qt Creator
+* Sublime Text 2
+* Sublime Text 3
+* Vim
+* Visual Studio Code
+* Visual Studio 2012
+* Visual Studio 2013
+* Visual Studio 2015
+* Visual Studio 2017
+
+The communication between Sourcetrail and the code editor is achieved using a local TCP connection. Sourcetrail uses the port 6667 to listen for incoming messages. Outgoing messages will be sent to the port 6666. The port numbers can be edited in the [Preferences Window](#preferences-window).
+
+Outgoing messages are in the form:
+`moveCursor>>absolute/file_path>>line_number>>column_number<EOM>`
+Incoming messages are in the form:
+`setActiveToken>>absolute/file_path>>line_number>>column_number<EOM>`
+
+## From Sourcetrail
+
+If you want your editor to open a file at a specific location from within Sourcetrail, you can achieve this by either selecting the option `Set IDE Cursor` from the right-click menu in the <a href="#CodeView">Code View]() or by simply clicking into a line in the [Code View](#code-view) while holding down the `Ctrl` or `Cmd` key.
+
+!["Plugin Use In Sourcetrail"](img/plugin_use_in_sourcetrail.png "Plugin Use In Sourcetrail")
+
+## To Sourcetrail
+
+By using a Sourcetrail plugin for your code editor, you can select a location within a source file and Sourcetrail will show you all symbols found at this location. Please have look at the list below to see which plugins are currently available and how they are used.
+
+### Atom
+
+**Repo**
+[https://github.com/CoatiSoftware/atom-sourcetrail](https://github.com/CoatiSoftware/atom-sourcetrail)
+
+**Installation**
+
+1. In Atom go to Settings with `Edit -> Preferences` or `Ctrl` + `,`
+1. Go to Install and search for sourcetrail
+1. Install atom-sourcetrail
+
+**Use**
+To start the Tcp Server got `Packages -> Sourcetrail -> Start Server`
+To send a location to Sourcetrail, place the cursor and right-click and select `Send location to Sourcetrail`
+or `Packages -> Sourcetrail -> Send location to Sourcetrail`
+
+### CLion/IntelliJ IDEA
+
+**Repo**
+[https://github.com/CoatiSoftware/idea-sourcetrail](https://github.com/CoatiSoftware/idea-sourcetrail)
+
+**Installation**
+
+1. File | Settings... (or IntelliJ IDEA | Preferences... for macOS) to open the Settings
+1. Go to Plugins
+1. Click Marketplace tab
+1. Search for idea-sourcetrail
+1. Click Install for idea-sourcetrail plugin
+
+**Use**
+If you want IntelliJ IDEA/CLion to activate a certain element in Sourcetrail, right-click that element to
+bring up the context menu and choose the “Sent Location” option.
+
+!["Plugin Use In CLion"](img/plugin_use_in_clion.png "Plugin Use In CLion")
+
+### Eclipse
+
+**Repo**
+[https://github.com/CoatiSoftware/eSourcetrail](https://github.com/CoatiSoftware/eSourcetrail)
+
+**Installation**
+
+* Updatesite:
+	1. In Eclipse go in the menu to `Help -> Install new Software...`
+	1. Add the Sourcetrail Updatesite
+		* type [https://CoatiSoftware.github.io/eSourcetrail/updatesite](https://CoatiSoftware.github.io/eSourcetrail/updatesite) into the `Work with:` field
+		* or press `Add...` and add the address above
+	1. Select all and finish the next step.
+	1. Eclipse needs to restart and can now communicate with Eclipse.
+* Manually:
+	1. Download this [eSourcetrail-gh-pages.zip](https://github.com/CoatiSoftware/eSourcetrail/archive/gh-pages.zip) and unzip it.
+	1. In Eclipse go in the menu to `Help -> Install new Software...`
+	1. Click the `Add...` Button
+	1. Click the `Local...` Button select the updatesite folder in the unzipped folder
+	1. Select all and finish the next step.
+	1. Eclipse needs to restart and can now communicate with Eclipse.
+
+**Use**
+If you want Eclipse to activate a certain element in Sourcetrail, right-click that element to bring up the context menu and choose the “Set active Token” option.
+
+!["Plugin Use In Eclipse"](img/plugin_use_in_eclipse.png "Plugin Use In Eclipse")
+
+### Emacs
+
+**Repo**
+[https://github.com/CoatiSoftware/emacs-sourcetrail](https://github.com/CoatiSoftware/emacs-sourcetrail)
+
+**Installation**
+
+* Manually
+	1. Download the sourcetrail.el from [https://github.com/CoatiSoftware/emacs-sourcetrail](https://github.com/CoatiSoftware/emacs-sourcetrail)
+	1. In Emacs press `M` + `x` and type in `package-install-file`
+	1. Type in the path to the downloaded sourcetrail.el file
+* Melpa
+	1. Add Melpa to your package-archives
+	1. Press `M` + `x` and type `list-packages`
+	1. Search for sourcetrail and mark sourcetrail with `i` then press `x` and the confirm with yes
+
+**Use**
+If you want Emacs to activate a certain element in Sourcetrail, set your cursor to that element and
+`M` + `x` and type in `sourcetrail-send-location`.
+To get Location from Sourcetrail the sourcetrail-mode need to be active. To active the sourcetrail-mode
+press `M` + `x` and type in `sourcetrail-mode`
+
+### Qt Creator
+
+**Repo**
+[https://github.com/CoatiSoftware/qtc-sourcetrail](https://github.com/CoatiSoftware/qtc-sourcetrail)
+
+**Installation**
+
+1. Download the plugin for your system from [here](https://github.com/CoatiSoftware/qtc-sourcetrail/releases).
+1. Copy the files into the plugin folder where the QtCreator is installed(eg. /usr/lib/qtcreator/plugins)
+	* the plugin path can be found at Help -> System Information... -> PluginsPath
+
+**Use**
+If you want QtCreator to activate a certain element in Sourcetrail, click a location to place the cursor, right-click to bring up the context menu and choose the “Sourcetrail - Set active Token” option. Please note that the position of the cursor will be sent to Sourcetrail and not the position you opened the context menu at.
+
+### Sublime Text
+
+**Repo**
+[https://github.com/CoatiSoftware/sublime-sourcetrail](https://github.com/CoatiSoftware/sublime-sourcetrail)
+
+**Installation**
+
+* Manually
+	1. To install the Sourcetrail plugin for Sublime Text copy the SourcetrailPlugin folder located in your `ide_plugins/sublime_text` to your `SublimeText/Packages` folder
+	1. restart Sublime
+* Package Control
+	1. If you don't have Package Control for Sublime go to https://packagecontrol.io and install it
+	1. Open Command Palette  with `Ctrl` + `Shift` + `P`
+	1. Select `Package Control: Install Package`
+	1. Install `sourcetrail`
+
+**Use**
+If you want Sublime to activate a certain element in Sourcetrail, click a location to place the cursor, right-click to bring up the context menu and choose the “Sourcetrail - Set active Token” option. Please note that the position of the cursor will be sent to Sourcetrail and not the position you opened the context menu at.
+
+!["Plugin Use In Sublime Text"](img/plugin_use_in_sublime_text.png "Plugin Use In Sublime Text")
+
+### Vim
+
+**Repo**
+[https://github.com/CoatiSoftware/vim-sourcetrail](https://github.com/CoatiSoftware/vim-sourcetrail)
+
+**Installation**
+
+Please visit the [vim-sourcetrail](https://github.com/CoatiSoftware/vim-sourcetrail) repository on GitHub for details.
+
+**Use**
+If you want Vim to activate a certain element in Sourcetrail, go to the code location and use
+`:SourcetrailActivateToken`, now Sourcetrail should display your the chosen location.
+Use`:help sourcetrail.txt` get get more information about the plugin
+
+### VS Code
+
+**Repo**
+[https://github.com/CoatiSoftware/vsce-sourcetrail](https://github.com/CoatiSoftware/vsce-sourcetrail)
+
+**Installation**
+
+1. In VS Code go to Extensions(`Ctrl` + `Shift` + `X`)
+1. Search for sourcetrail in the marketplace
+1. Install sourcetrail
+
+**Use**
+To start the Tcp Server go to the Command Palette(`Ctrl` + `Shift` + `P`) and type: `Sourcetrail: (Re)start server`
+To send a location to Sourcetrail, place the cursor and right-click and select `Sourcetrail: Send Location`
+or type in the Command Palette: `Sourcetrail: Send Location`
+
+### Visual Studio
+
+**Download, Reviews:**
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1208751.SourcetrailExtension)
+
+**Repo**
+[https://github.com/CoatiSoftware/vs-sourcetrail](https://github.com/CoatiSoftware/vs-sourcetrail)
+
+**Installation**
+
+1. open Visual Studio
+1. from the menu bar select "Tools" -> "Extensions and Updates..."
+1. in the "Extensions and Updates" dialog choose "Online" -> "Visual Studio Gallery"
+1. press `Ctrl` + `E` and enter "Sourcetrail Extension" into the search bar
+1. click the install button
+
+**Use**
+If you want Visual Studio to activate a certain element in Sourcetrail, right-click that element to bring up the context menu and choose the “Set active Token” option.
+
+!["Plugin Use In Visual Studio"](img/plugin_use_in_visual_studio.png "Plugin Use In Visual Studio")
+
+**Create a Clang Compilation Database from a VS Solution**
+As a Clang based tool Sourcetrail supports the JSON Compilation Database format for simplified project setup. This extension enables you to generate a JSON Compilation Database from your Visual Studio projects and solutions. The great news is: This format is independent from the Sourcetrail tool, so you can also use the generated Compilation Database to run other Clang based tools.
+The wizard for creating a Compilation Database is located in the Sourcetrail section in the VS menu bar. Note that the option is only useable if a solution containing at least one C/C++ project is loaded.
+
+!["VS Plugin Menu"](img/vs_plugin_menu.png "VS Plugin Menu")
+
+In the Compilation Database wizard you can select projects you want to include in the JSON file as well as the desired build target platform and configuration and a number of other options.
+
+!["VS Extension Dialog"](img/vs_extension_dialog.png "VS Extension Dialog")
+
+| Option | Description
+| --- | ---
+| Select Projects | The list of C/C++ projects in your solution. Check all projects you want to be included in the generated JSON Compilation Database file.
+| De/Select All | Will select all projects if at least one project is not selected. If all projects are selected they will all be unselected.
+| Configuration | A dropdown list of the available build configurations. The selected configuration affects include paths and compile flags for the Compilation Database.
+| Platform | A dropdown list of the available target platforms. The selected platform affects include paths and compile flags for the Compilation Database.
+| Browse | Opens a folder browser to select the directory where the Compilation Database will be created in. By default it is the directory of your solution. Instead of using the folder browser you can also paste a path into the adjacent text field.
+| filename | This is the name for the Compilation Database file. By default it is the same name as your solution.
+| C Standard | A dropdown list of all C standards supported by Sourcetrail. If your projects contain C files select the appropriate standard.
+| Cancel | Aborts the process and closes the wizard.
+| Create | Creates the Compilation Database using the specified options. Note that at least one project has to be selected to start creating.
+
+Once the Compilation Database was successfully created it can be found in the specified target directory. From this Compilation Database you can create a Sourcetrail project as [described above](#create-a-project-from-compilation-database).
+
+**Settings**
+Network settings and logging options can be changed in the plugin's Tools/Options entry.
+
+!["VS Plugin Ports 0"](img/vs_plugin_ports_0.png "VS Plugin Ports 0")
+!["VS Plugin Ports 1"](img/vs_plugin_ports_1.png "VS Plugin Ports 1")
+
+| Option | Description
+| --- | ---
+| File Logging | Enable log output for the plugin. Additionally to the output file, log messages will also be displayed in VS'
+| Log Obfuscation | Obfuscate project names and file names as well as directories in the log output. Note that already logged data **will not be obfuscated retroactively**. A dictionary, mapping obfuscated names to original names, will be created in a separate file.
+| Sourcetrail Port | The port on which Sourcetrail will receive messages. Note that this must match the port setting in Sourcetrail itself.
+| Thread Count | The number of threads used during creation of the Compilation Database
+| VS Port | The port on which Visual Studio will receive messages. Note that this must match the port setting in Sourcetrail itself.
+
+**Logging**
+
+The plugin offers optional file logging. Should you ever have issues with the plugin we recommend to turn logging on. This will help to pinpoint and resolve the root cause faster.
+Logs will be created in `..\AppData\Local\Coati Software\Plugins\VS` folder. A new log file will be created every time you restart VS and logging is enabled.
+
+!["VS Log Folder"](img/vs_log_folder.png "VS Log Folder")
+
+Note that the logs will include project names and file names as well as directories specific to your project. If you wish to keep this information secret you can enable [log obfuscation](#vs-plugin-option-obfuscation).
+Project- and file names as well as directories will be replaced by an alphanumeric sequence. The sequence has the form `a0, b0, c0,..., a1, b1, c1,...`. Note that after switching on obfuscation, already logged data **will not be obfuscated retroactively**. No log files will be send to Coati Software automatically. You can check any file you may want to send us for sensible information before sending it.
+A dictionary, mapping obfuscated names to original names, will be created in your log folder if log obfuscation is switched on. When during the support process we refer to project items by their obfuscated name you can still make sense of it. **Do not send the dictionary to anybody else**.
+
+Lastly, log messages are also displayed in the VS output window. This is tied to file logging and is not enabled or disabled separately.
+
+!["VS Output Window"](img/vs_output_window.png "VS Output Window")
+
+## IDE Communication Protocol
+
+Sourcetrail's IDE plugins communicate with Sourcetrail via sockets, using TCP. Sourcetrail implements a number of messages to provide an interface for the plugins.
+This chapter explains the general structure of those messages, followed by a list of possible message types.
+
+### Message Structure
+
+The basic structure of the messages used by Sourcetrail plugins consists of a prefix to identify the message type, followed by no, one, or multiple parameters and ends with an 'end-of-message' token. Parameters and tokens are separated by a 'divider' token.
+
+| Name | Token | Description
+| --- | --- | ---
+| messageType | [see below](#message-types) | A string that determines how the message will be interpreted by Sourcetrail or the plugin
+| divider | `>>` | Separates the tokens of the message
+| parameter | [see below](#message-types) | Typically an integer or string
+| endOfMessage | `<EOM>` | Helps to determine the end of a message
+
+Messages have the following form:
+
+`messageType<<parameter<<...<<parameter<EOM>`
+
+### Message Types
+
+Sourcetrail does implement a number of message types that can be used by Sourcetrail plugins. In the following is a list of the messages that Sourcetrail may send to plugins and messages that may be sent by a plugin to Sourcetrail.
+
+Note that you can chose which messages you want to implement. Sourcetrail will not make problems if you chose to ignore certain messages.
+
+**Incoming messages**
+These messages may be received by a plugin.
+
+| Message | Parameters | Description
+| --- | --- | ---
+| `moveCursor` | fileLocation: string<br />row: integer<br />column: integer | Set the cursor of your editor or IDE to the given file location.<br />Note that fileLocation is the absolute path and name of the target file.
+| `createCDB` |  | Sourcetrail may send this message to prompt your plugin to create a Compilation Database (CDB). Once the CDB is ready you may want to respond with a `createCDBProject` message.
+| `ping` |  | Sourcetrail may send a ping to determine if anybody is listening. Respond with a ping message yourself. Sourcetrail will not respond to this message.
+
+**Outgoing messages**
+Your plugin may send these messages to Sourcetrail.
+
+| Message | Parameters | Description
+| --- | --- | ---
+| `setActiveToken` | fileLocation: string<br />row: integer<br />column: integer | Tells Sourcetrail to shift focus to the token located at the given position. Note that fileLocation is the absolute path and name of the target file.
+| `createCDBProject` | cdbPath: string<br />headerPaths: string | If your plugin can provide a Compilation Database this message can prompt Sourcetrail to import it and display an appropriate dialog for the user. headerPaths is a list of the base project's header include paths. Separate the single paths using the divider token. You can add as many paths as you need.
+| `ping` |  | Your plugin may send this message to Sourcetrail to tell it it's listening.
+
+# Frequently Asked Questions
+
+### Can I use Sourcetrail on confidential source code?
+
+Yes. Sourcetrail keeps the data completely offline and unless disabled, will only establish a connection to the internet to check if a more recent version is available.
+
+### What happens to the indexed data?
+
+Sourcetrail does two things with the data collected during indexing:
+
+1. The data is stored in the `.srctrldb` file which is in the same directory as the `.srctrlprj` file. This database file is used by Sourcetrail to serve its purpose of letting you navigate your source code and also allowing Sourcetrail to re-open the project without re-indexing the source code each time.
+1. If logging is enabled, some of the data gets logged into a log file saved in [data](#datafolter)/logs. These logs can be useful to us for fixing bugs. We may ask for log information on bug reports, but you should only provide it, if your source code is not confidential.
+
+** Note:** The ` .srctrldb ` file is actually a ` .sqlite ` database file and can be inspected using the [DB Browser for SQLite](https://sqlitebrowser.org/).
+
+### I have further questions, how do I reach you?
+
+If you have further questions, please e-mail us at [mail@coati.io](mailto:mail@coati.io).
