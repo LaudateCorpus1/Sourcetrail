@@ -1408,8 +1408,7 @@ By using a Sourcetrail plugin for your code editor, you can select a location wi
 
 ### Atom
 
-**Repo**
-[https://github.com/CoatiSoftware/atom-sourcetrail](https://github.com/CoatiSoftware/atom-sourcetrail)
+**Repo**: [https://github.com/CoatiSoftware/atom-sourcetrail](https://github.com/CoatiSoftware/atom-sourcetrail)
 
 **Installation**
 
@@ -1418,14 +1417,14 @@ By using a Sourcetrail plugin for your code editor, you can select a location wi
 1. Install atom-sourcetrail
 
 **Use**
+
 To start the Tcp Server got `Packages -> Sourcetrail -> Start Server`
 To send a location to Sourcetrail, place the cursor and right-click and select `Send location to Sourcetrail`
 or `Packages -> Sourcetrail -> Send location to Sourcetrail`
 
 ### CLion/IntelliJ IDEA
 
-**Repo**
-[https://github.com/CoatiSoftware/idea-sourcetrail](https://github.com/CoatiSoftware/idea-sourcetrail)
+**Repo**: [https://github.com/CoatiSoftware/idea-sourcetrail](https://github.com/CoatiSoftware/idea-sourcetrail)
 
 **Installation**
 
@@ -1436,6 +1435,7 @@ or `Packages -> Sourcetrail -> Send location to Sourcetrail`
 1. Click Install for idea-sourcetrail plugin
 
 **Use**
+
 If you want IntelliJ IDEA/CLion to activate a certain element in Sourcetrail, right-click that element to
 bring up the context menu and choose the “Sent Location” option.
 
@@ -1443,8 +1443,7 @@ bring up the context menu and choose the “Sent Location” option.
 
 ### Eclipse
 
-**Repo**
-[https://github.com/CoatiSoftware/eSourcetrail](https://github.com/CoatiSoftware/eSourcetrail)
+**Repo**: [https://github.com/CoatiSoftware/eSourcetrail](https://github.com/CoatiSoftware/eSourcetrail)
 
 **Installation**
 
@@ -1464,14 +1463,14 @@ bring up the context menu and choose the “Sent Location” option.
 	1. Eclipse needs to restart and can now communicate with Eclipse.
 
 **Use**
+
 If you want Eclipse to activate a certain element in Sourcetrail, right-click that element to bring up the context menu and choose the “Set active Token” option.
 
 !["Plugin Use In Eclipse"](img/plugin_use_in_eclipse.png "Plugin Use In Eclipse")
 
 ### Emacs
 
-**Repo**
-[https://github.com/CoatiSoftware/emacs-sourcetrail](https://github.com/CoatiSoftware/emacs-sourcetrail)
+**Repo**: [https://github.com/CoatiSoftware/emacs-sourcetrail](https://github.com/CoatiSoftware/emacs-sourcetrail)
 
 **Installation**
 
@@ -1485,6 +1484,7 @@ If you want Eclipse to activate a certain element in Sourcetrail, right-click th
 	1. Search for sourcetrail and mark sourcetrail with `i` then press `x` and the confirm with yes
 
 **Use**
+
 If you want Emacs to activate a certain element in Sourcetrail, set your cursor to that element and
 `M` + `x` and type in `sourcetrail-send-location`.
 To get Location from Sourcetrail the sourcetrail-mode need to be active. To active the sourcetrail-mode
@@ -1492,8 +1492,7 @@ press `M` + `x` and type in `sourcetrail-mode`
 
 ### Qt Creator
 
-**Repo**
-[https://github.com/CoatiSoftware/qtc-sourcetrail](https://github.com/CoatiSoftware/qtc-sourcetrail)
+**Repo**: [https://github.com/CoatiSoftware/qtc-sourcetrail](https://github.com/CoatiSoftware/qtc-sourcetrail)
 
 **Installation**
 
@@ -1502,12 +1501,12 @@ press `M` + `x` and type in `sourcetrail-mode`
 	* the plugin path can be found at Help -> System Information... -> PluginsPath
 
 **Use**
+
 If you want QtCreator to activate a certain element in Sourcetrail, click a location to place the cursor, right-click to bring up the context menu and choose the “Sourcetrail - Set active Token” option. Please note that the position of the cursor will be sent to Sourcetrail and not the position you opened the context menu at.
 
 ### Sublime Text
 
-**Repo**
-[https://github.com/CoatiSoftware/sublime-sourcetrail](https://github.com/CoatiSoftware/sublime-sourcetrail)
+**Repo**: [https://github.com/CoatiSoftware/sublime-sourcetrail](https://github.com/CoatiSoftware/sublime-sourcetrail)
 
 **Installation**
 
@@ -1521,28 +1520,28 @@ If you want QtCreator to activate a certain element in Sourcetrail, click a loca
 	1. Install `sourcetrail`
 
 **Use**
+
 If you want Sublime to activate a certain element in Sourcetrail, click a location to place the cursor, right-click to bring up the context menu and choose the “Sourcetrail - Set active Token” option. Please note that the position of the cursor will be sent to Sourcetrail and not the position you opened the context menu at.
 
 !["Plugin Use In Sublime Text"](img/plugin_use_in_sublime_text.png "Plugin Use In Sublime Text")
 
 ### Vim
 
-**Repo**
-[https://github.com/CoatiSoftware/vim-sourcetrail](https://github.com/CoatiSoftware/vim-sourcetrail)
+**Repo**: [https://github.com/CoatiSoftware/vim-sourcetrail](https://github.com/CoatiSoftware/vim-sourcetrail)
 
 **Installation**
 
 Please visit the [vim-sourcetrail](https://github.com/CoatiSoftware/vim-sourcetrail) repository on GitHub for details.
 
 **Use**
+
 If you want Vim to activate a certain element in Sourcetrail, go to the code location and use
 `:SourcetrailActivateToken`, now Sourcetrail should display your the chosen location.
 Use`:help sourcetrail.txt` get get more information about the plugin
 
 ### VS Code
 
-**Repo**
-[https://github.com/CoatiSoftware/vsce-sourcetrail](https://github.com/CoatiSoftware/vsce-sourcetrail)
+**Repo**: [https://github.com/CoatiSoftware/vsce-sourcetrail](https://github.com/CoatiSoftware/vsce-sourcetrail)
 
 **Installation**
 
@@ -1551,6 +1550,7 @@ Use`:help sourcetrail.txt` get get more information about the plugin
 1. Install sourcetrail
 
 **Use**
+
 To start the Tcp Server go to the Command Palette(`Ctrl` + `Shift` + `P`) and type: `Sourcetrail: (Re)start server`
 To send a location to Sourcetrail, place the cursor and right-click and select `Sourcetrail: Send Location`
 or type in the Command Palette: `Sourcetrail: Send Location`
@@ -1560,8 +1560,7 @@ or type in the Command Palette: `Sourcetrail: Send Location`
 **Download, Reviews:**
 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1208751.SourcetrailExtension)
 
-**Repo**
-[https://github.com/CoatiSoftware/vs-sourcetrail](https://github.com/CoatiSoftware/vs-sourcetrail)
+**Repo**: [https://github.com/CoatiSoftware/vs-sourcetrail](https://github.com/CoatiSoftware/vs-sourcetrail)
 
 **Installation**
 
@@ -1572,11 +1571,13 @@ or type in the Command Palette: `Sourcetrail: Send Location`
 1. click the install button
 
 **Use**
+
 If you want Visual Studio to activate a certain element in Sourcetrail, right-click that element to bring up the context menu and choose the “Set active Token” option.
 
 !["Plugin Use In Visual Studio"](img/plugin_use_in_visual_studio.png "Plugin Use In Visual Studio")
 
 **Create a Clang Compilation Database from a VS Solution**
+
 As a Clang based tool Sourcetrail supports the JSON Compilation Database format for simplified project setup. This extension enables you to generate a JSON Compilation Database from your Visual Studio projects and solutions. The great news is: This format is independent from the Sourcetrail tool, so you can also use the generated Compilation Database to run other Clang based tools.
 The wizard for creating a Compilation Database is located in the Sourcetrail section in the VS menu bar. Note that the option is only useable if a solution containing at least one C/C++ project is loaded.
 
@@ -1660,7 +1661,7 @@ These messages may be received by a plugin.
 
 | Message | Parameters | Description
 | --- | --- | ---
-| `moveCursor` | fileLocation: string<br />row: integer<br />column: integer | Set the cursor of your editor or IDE to the given file location.<br />Note that fileLocation is the absolute path and name of the target file.
+| `moveCursor` | `fileLocation: string`<br />`row: integer`<br />`column: integer` | Set the cursor of your editor or IDE to the given file location.<br />Note that fileLocation is the absolute path and name of the target file.
 | `createCDB` |  | Sourcetrail may send this message to prompt your plugin to create a Compilation Database (CDB). Once the CDB is ready you may want to respond with a `createCDBProject` message.
 | `ping` |  | Sourcetrail may send a ping to determine if anybody is listening. Respond with a ping message yourself. Sourcetrail will not respond to this message.
 
@@ -1686,7 +1687,7 @@ Sourcetrail does two things with the data collected during indexing:
 1. The data is stored in the `.srctrldb` file which is in the same directory as the `.srctrlprj` file. This database file is used by Sourcetrail to serve its purpose of letting you navigate your source code and also allowing Sourcetrail to re-open the project without re-indexing the source code each time.
 1. If logging is enabled, some of the data gets logged into a log file saved in [data](#datafolter)/logs. These logs can be useful to us for fixing bugs. We may ask for log information on bug reports, but you should only provide it, if your source code is not confidential.
 
-** Note:** The ` .srctrldb ` file is actually a ` .sqlite ` database file and can be inspected using the [DB Browser for SQLite](https://sqlitebrowser.org/).
+**Note:** The ` .srctrldb ` file is actually a ` .sqlite ` database file and can be inspected using the [DB Browser for SQLite](https://sqlitebrowser.org/).
 
 ### I have further questions, how do I reach you?
 
