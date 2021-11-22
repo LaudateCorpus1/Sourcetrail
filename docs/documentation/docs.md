@@ -1236,32 +1236,18 @@ Empty C/C++ Source Groups have the following configuration options:
 | --- | ---
 | Standard | Select the language standard that should be used for indexing your project. Usually the most recent language standard is preselected here. (See [Language Support](#supported-languages))
 | Cross-compilation | Check **Use specific target** and then use the dropdown boxes to specify a certain target platform. Please have a look at the clang compiler documentation on [cross-compilation](https://clang.llvm.org/docs/CrossCompilation.html) for more information.
-| Files & Directories to Index | These paths define the files and directories that will be indexed by Sourcetrail. Provide a directory to recursively add all contained source and header files. If your project's source code resides in one location, but generated source files are kept at a different location, you will also need to add that directory. You can make use of environment variables with `${ENV_VAR}`.
-
-For instructions on how to add paths see [Path List Box](#path-list-box).
-| Excluded Files & Directories | These paths define the files and directories that will be left out from indexing.
-Hints:
-* You can use the wildcard `*` which represents characters except `\` or `/` (e.g. `src/*/test.h` matches `src/app/test.h` but does not match `src/app/widget/test.h` or `src/test.h`)
+| Files & Directories to Index | These paths define the files and directories that will be indexed by Sourcetrail. Provide a directory to recursively add all contained source and header files. If your project's source code resides in one location, but generated source files are kept at a different location, you will also need to add that directory. You can make use of environment variables with `${ENV_VAR}`.<br />For instructions on how to add paths see [Path List Box](#path-list-box).
+| Excluded Files & Directories | These paths define the files and directories that will be left out from indexing.<br />Hints:<br />* You can use the wildcard `*` which represents characters except `\` or `/` (e.g. `src/*/test.h` matches `src/app/test.h` but does not match `src/app/widget/test.h` or `src/test.h`)
 * You can use the wildcard `**` which represents arbitrary characters (e.g. `src**test.h` matches `src/app/test.h` as well as `src/app/widget/test.h` or `src/test.h`)
-* You can make use of environment variables with `${ENV_VAR}`
-
-For instructions on how to add paths see [Path List Box](#path-list-box).
+* You can make use of environment variables with `${ENV_VAR}`<br />For instructions on how to add paths see [Path List Box](#path-list-box).
 | Source File Extensions | Define the valid extensions for source files including the dot e.g. `.cpp`. Sourcetrail will only try to index files that match one of these extensions.
-| Include Paths | Include Paths are used for resolving #include directives in the indexed source and header files. These paths are usually passed to the compiler with the `-I` or `-iquote` flags. Add all paths #include directives throughout your project are relative to. If all #include directives are specified relative to the project's root directory, please add that root directory here. If your project also includes files from external libraries (e.g. boost), please add these directories as well (e.g. add `path/to/boost_home/include`). You can make use of environment variables with `${ENV_VAR}`.
-
-For instructions on how to add paths see [Path List Box](#path-list-box).
-| Global Include Paths | The Global Include Paths will be used in all your projects in addition to the project specific Include Paths. These paths are usually passed to the compiler with the '-isystem' flag. Use them to add system header paths (See [Finding System Header Locations](#finding-system-header-locations) or use the auto detection below).
-
-For instructions on how to add paths see [Path List Box](#path-list-box).
+| Include Paths | Include Paths are used for resolving #include directives in the indexed source and header files. These paths are usually passed to the compiler with the `-I` or `-iquote` flags. Add all paths #include directives throughout your project are relative to. If all #include directives are specified relative to the project's root directory, please add that root directory here. If your project also includes files from external libraries (e.g. boost), please add these directories as well (e.g. add `path/to/boost_home/include`). You can make use of environment variables with `${ENV_VAR}`.<br />For instructions on how to add paths see [Path List Box](#path-list-box).
+| Global Include Paths | The Global Include Paths will be used in all your projects in addition to the project specific Include Paths. These paths are usually passed to the compiler with the '-isystem' flag. Use them to add system header paths (See [Finding System Header Locations](#finding-system-header-locations) or use the auto detection below).<br />For instructions on how to add paths see [Path List Box](#path-list-box).
 | Framework Search Paths (macOS only) | These paths are used to find `.framework` files used by your project. (For instructions on how to add paths see [Path List Box](#path-list-box).)
 | Global Framework Search Paths (macOS only) | These Framework Search Paths will be used in all your projects. (For instructions on how to add paths see [Path List Box](#path-list-box). For instructions on how to find the system header paths see [Finding System Header Locations](#finding-system-header-locations))
-| Compiler Flags | Define additional compiler flags used during indexing including the dash (e.g. use `-DRELEASE` to add a `#define` for `RELEASE`).
-
-For instructions on how to add paths see [Path List Box](#path-list-box).
+| Compiler Flags | Define additional compiler flags used during indexing including the dash (e.g. use `-DRELEASE` to add a `#define` for `RELEASE`).<br />For instructions on how to add paths see [Path List Box](#path-list-box).
 | Precompiled Header File | Select the path to the header file that should be used to generate a Precompiled Header File. The Precompiled Header File will be generated as pre-indexing step. If no path is supplied, no Precompiled Header File will be generated.
-| Precompiled Header Flags | Define if the already supplied compiler flags should be used for Precompiled Header File generation and define additional flags for Precompiled Header File generation only.
-
-For instructions on how to add paths see [Path List Box](#path-list-box).
+| Precompiled Header Flags | Define if the already supplied compiler flags should be used for Precompiled Header File generation and define additional flags for Precompiled Header File generation only.<br />For instructions on how to add paths see [Path List Box](#path-list-box).
 
 ## C/C++ Source Group from Compilation Database
 
