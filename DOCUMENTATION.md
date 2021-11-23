@@ -1,4 +1,4 @@
-!["Sourcetrail"](img/logo.png "Sourcetrail")
+!["Sourcetrail"](docs/documentation/img/logo.png "Sourcetrail")
 
 Documentation for version 2021.1
 
@@ -13,7 +13,7 @@ For questions you may have that are not answered by this document, please send u
 
 Sourcetrail is an interactive source explorer that simplifies navigation in existing source code by indexing your code and gathering data about its structure. Sourcetrail then provides a simple interface consisting of three interactive views, each playing a key role in helping you obtain the information you need:
 
-!["Sourcetrail Concept"](img/concept.png "Sourcetrail Concept")
+!["Sourcetrail Concept"](docs/documentation/img/concept.png "Sourcetrail Concept")
 
 * **Search:** Use the search field to quickly find and select indexed symbols in your source code. The autocompletion box will instantly provide an overview of all matching results throughout your codebase.
 * **Graph:** The graph displays the structure of your source code. It focuses on the currently selected symbol and directly shows all incoming and outgoing dependencies to other symbols.
@@ -57,7 +57,7 @@ After launching Sourcetrail you will see the [Start Window](#start-window). From
 > * Click **New Project** to create a new project.
 > * or select one from the **Recent Projects** _(ex: TicTacToe)_ and continue with the [UI Intro](#ui-intro)
 
-!["Start Window"](img/start_window.png "Start Window")
+!["Start Window"](docs/documentation/img/start_window.png "Start Window")
 
 ## Creating a New Project
 
@@ -67,7 +67,7 @@ When creating a new Sourcetrail project you will use the [Project Setup Wizard](
 > * Give your project a **Name** and select a **Location** for your Sourcetrail project to live.
 > * Click **Add Source Group** to add source files to the project.
 
-!["Project Setup Wizard Start"](img/project_setup_wizard_start.png "Project Setup Wizard Start")
+!["Project Setup Wizard Start"](docs/documentation/img/project_setup_wizard_start.png "Project Setup Wizard Start")
 
 ### Add Source Group
 
@@ -78,7 +78,7 @@ Scroll past the image for detailed instructions on setting this up.
 > **Tasks:**
 > * Select your chosen **Source Group** setup type and come back here as soon as the project is created.
 
-!["Project Setup Wizard Source Group Type"](img/project_setup_wizard_source_group_type.png "Project Setup Wizard Source Group Type")
+!["Project Setup Wizard Source Group Type"](docs/documentation/img/project_setup_wizard_source_group_type.png "Project Setup Wizard Source Group Type")
 
 #### Source Group Setup for C/C++
 
@@ -95,19 +95,19 @@ Exporting a Compilation Database:
 
 If you managed to export a `compile_commands.json` file, then please continue at [Create a Source Group from Compilation Database](#create-a-project-from-compilation-database) and come back after you finished creating the project.
 
-!["Project Setup Wizard Start CDB"](img/project_setup_wizard_start_cdb.png "Project Setup Wizard Start CDB")
+!["Project Setup Wizard Start CDB"](docs/documentation/img/project_setup_wizard_start_cdb.png "Project Setup Wizard Start CDB")
 
 **Are you using Visual Studio?**
 
 If you are using Visual Studio you can continue at [Source Group creation from Visual Studio](#create-a-project-from-visual-studio) and export a Compilation Database with our [Visual Studio Plugin](#visual-studio).
 
-!["Project Setup Wizard Start VS"](img/project_setup_wizard_start_vs.png "Project Setup Wizard Start VS")
+!["Project Setup Wizard Start VS"](docs/documentation/img/project_setup_wizard_start_vs.png "Project Setup Wizard Start VS")
 
 **Create Empty**
 
 If neither of the above options apply to your project, please continue at [create an empty C/C++ Source Group](#create-an-empty-cxx-project) and return here once the project is created.
 
-!["Project Setup Wizard Source Group Type"](img/project_setup_wizard_source_group_type.png "Project Setup Wizard Source Group Type")
+!["Project Setup Wizard Source Group Type"](docs/documentation/img/project_setup_wizard_source_group_type.png "Project Setup Wizard Source Group Type")
 
 
 #### Source Group Setup for Java
@@ -116,19 +116,19 @@ If neither of the above options apply to your project, please continue at [creat
 
 If you are using Gradle you can continue at [Source Group creation from Gradle](#create-a-project-from-gradle-configuration) to automatically setup your Source Group using your Gradle build configuration.
 
-!["Project Setup Wizard Start Java Gradle"](img/project_setup_wizard_start_java_gradle.png "Project Setup Wizard Start Java Gradle")
+!["Project Setup Wizard Start Java Gradle"](docs/documentation/img/project_setup_wizard_start_java_gradle.png "Project Setup Wizard Start Java Gradle")
 
 **Are you using Maven?**
 
 If you are using Maven please continue at [Source Group creation from Maven](#create-a-project-from-maven-configuration) to automatically setup your Source Group using your Maven build configuration.
 
-!["Project Setup Wizard Start Java Maven"](img/project_setup_wizard_start_java_maven.png "Project Setup Wizard Start Java Maven")
+!["Project Setup Wizard Start Java Maven"](docs/documentation/img/project_setup_wizard_start_java_maven.png "Project Setup Wizard Start Java Maven")
 
 **Create Empty**
 
 If you do not have your project configured using Gradle or Maven, please continue at [Create an Empty Java Source Group](#create-an-empty-java-project) and come back here as soon as the project is created.
 
-!["Project Setup Wizard Start Java Empty"](img/project_setup_wizard_start_java_empty.png "Project Setup Wizard Start Java Empty")
+!["Project Setup Wizard Start Java Empty"](docs/documentation/img/project_setup_wizard_start_java_empty.png "Project Setup Wizard Start Java Empty")
 
 #### Source Group Setup for Python
 
@@ -136,7 +136,7 @@ If you do not have your project configured using Gradle or Maven, please continu
 
 If you want to browse your Python source code with Sourcetrail, please continue at [Create an Empty Python Source Group](#create-an-empty-python-project) and come back here as soon as the project is created.
 
-!["Project Setup Wizard Start Python Empty"](img/project_setup_wizard_start_python_empty.png "Project Setup Wizard Start Python Empty")
+!["Project Setup Wizard Start Python Empty"](docs/documentation/img/project_setup_wizard_start_python_empty.png "Project Setup Wizard Start Python Empty")
 
 ## Source Indexing
 
@@ -147,7 +147,7 @@ After the project is created, Sourcetrail will ask you whether you want to start
 > * Wait until the indexing of your source files has finished.
 > * or Click **Stop** or press ESC to stop indexing (Sourcetrail will provide all information gathered so far and the indexing can be continued later by [refreshing](#refresh)).
 
-!["Indexing"](img/indexing.png "Indexing")
+!["Indexing"](docs/documentation/img/indexing.png "Indexing")
 
 After indexing is completed, Sourcetrail will show an overview of all indexed symbols in the [graph view](#graph-view) and some statistics in the [code view](#code-view).
 
@@ -159,7 +159,7 @@ If the indexing yields errors, the status view will be shown with a list of erro
 > * Fix your errors and [refresh](#refresh) to re-index the files with errors (Open Issue: As long as there was no change in the specific file, Sourcetrail won't reindex it, use the **Force Refresh** option from the [Edit Menu](#edit)).
 > * or ignore them and continue with an incomplete index.
 
-!["Error View"](img/error_view.png "Error View")
+!["Error View"](docs/documentation/img/error_view.png "Error View")
 
 ## User Interface
 
@@ -167,17 +167,17 @@ As mentioned earlier, Sourcetrail's user interface is split into three main view
 
 All three views display information about the currently selected symbol:
 
-!["Main Screen"](img/main_screen.png "Main Screen")
+!["Main Screen"](docs/documentation/img/main_screen.png "Main Screen")
 
 ### 1. Search Field
 
 The [Search Field](#search-bar) allows for easy access to all indexed symbols. Use it to find all classes and functions you wish to investigate. In addition, it also holds the UI buttons for navigating [back & forward](#back-&-forward) as well as [refreshing](#refresh).
 
-!["Search View"](img/search_view.png "Search View")
+!["Search View"](docs/documentation/img/search_view.png "Search View")
 
 When entering a search query, the [autocompletion popup](#autocompletion-popup) will provide you with a concise list of all matching symbols. Note that Sourcetrail uses a fuzzy matching algorithm, that allows you to skip characters while entering a query.
 
-!["Search View Completion"](img/search_view_completion.png "Search View Completion")
+!["Search View Completion"](docs/documentation/img/search_view_completion.png "Search View Completion")
 
 ### 2. Graph Visualization
 
@@ -186,7 +186,7 @@ The [graph visualization](#graph-view) displays the currently selected symbol in
 * **Nodes:** All named symbols in your source code will be displayed as different [nodes](#nodes), such as `functions`, `classes` or `files`. Nodes with members (like `classes`) can be expanded to show all their contents, the number at the expansion arrow shows how many members are hidden. Clicking a node will activate it and update all the views to the new selection. Dragging a node can be used to change its position.
 * **Edges:** The relationships between the symbols are displayed as different [edges](#edges), such as `type use`, `function call` or `file include`. Sometimes edges get bundled together and are displayed as `bundled edges` that show a number of how many edges are contained. Clicking an edge will highlight its source location in the code view.
 
-!["Graph View Graph"](img/graph_view_graph.png "Graph View Graph")
+!["Graph View Graph"](docs/documentation/img/graph_view_graph.png "Graph View Graph")
 
 #### Colors:
 The different node and edge types are also displayed using different colors. The default color scheme uses this convention:
@@ -200,7 +200,7 @@ The different node and edge types are also displayed using different colors. The
 #### Hatching:
 Nodes displayed with a striped hatching, are nodes that were used within your indexed source files, but were not defined. Clicking them shows all locations where they are used, without providing their declaration.
 
-!["Node Non Indexed"](img/node_non_indexed.png "Node Non Indexed")
+!["Node Non Indexed"](docs/documentation/img/node_non_indexed.png "Node Non Indexed")
 
 #### Legend:
 
@@ -210,7 +210,7 @@ For a full list on all existing nodes and edges take a look at the integrated [G
 
 The [code view](#code-view) displays all locations of the currently active symbol within the indexed source files. It does not allow for editing the source code. Syntax highlighting is used to increase readability. Source locations that are surrounded by a box when hovered can be clicked to activate the respective symbol. Active source locations are highlighted.
 
-!["Code View"](img/code_view.png "Code View")
+!["Code View"](docs/documentation/img/code_view.png "Code View")
 
 The source locations are displayed as code snippets, containing the line of interest and extra lines added to the top and bottom to give information about its context. Code snippets are then bundled together into files.
 
@@ -218,15 +218,15 @@ The source locations are displayed as code snippets, containing the line of inte
 
 * **Minimized:** The file does not show any content
 
-!["Snippet Minimized"](img/snippet_minimized.png "Snippet Minimized")
+!["Snippet Minimized"](docs/documentation/img/snippet_minimized.png "Snippet Minimized")
 
 * **Snippets:** The file displays the snippets containing active locations separated by lines.
 
-!["Snippet Snippets"](img/snippet_snippets.png "Snippet Snippets")
+!["Snippet Snippets"](docs/documentation/img/snippet_snippets.png "Snippet Snippets")
 
 * **Maximized:** The [code view](#code-view) switches to [single file mode](#single-file-mode) and the whole content of the file is visible.
 
-!["Code View Single"](img/code_view_single.png "Code View Single")
+!["Code View Single"](docs/documentation/img/code_view_single.png "Code View Single")
 
 For more information, please visit the [Code View Files](#files) section.
 
@@ -253,7 +253,7 @@ Download and open the zip file and extract its contents into a temporary folder 
 ## macOS
 Download and open the Sourcetrail.dmg file and drag Sourcetrail.app into the applications folder. You can now launch Sourcetrail from your Applications.
 
-!["Installation macOS"](img/installation_mac.png "Installation macOS")
+!["Installation macOS"](docs/documentation/img/installation_mac.png "Installation macOS")
 
 ## Linux
 
@@ -357,7 +357,7 @@ The Java Runtime Library (called `libjvm.so`) can be found inside of your JRE in
 
 Sourcetrail's three views are organized into subwindows, which can be freely arranged within the Main Window or detached from it. Each subwindow has a title bar displaying its name and 2 buttons for closing the subwindow and for detaching it from the Main Window.
 
-!["Main Window"](img/main_window.png "Main Window")
+!["Main Window"](docs/documentation/img/main_window.png "Main Window")
 
 **Interactions:**
 
@@ -369,7 +369,7 @@ Sourcetrail's three views are organized into subwindows, which can be freely arr
 
 The Tab Bar is located at the top of the [Main Window](#main-window) and is used to open multiple symbols in parallel.
 
-!["Tab Bar"](img/tab_bar.png "Tab Bar")
+!["Tab Bar"](docs/documentation/img/tab_bar.png "Tab Bar")
 
 **Interactions:**
 
@@ -389,7 +389,7 @@ It displays:
 * Error Count if the currently loaded project has errors.
 * Indexing progress bar while indexing.
 
-!["Status Bar"](img/status_bar.png "Status Bar")
+!["Status Bar"](docs/documentation/img/status_bar.png "Status Bar")
 
 **Interactions:**
 
@@ -401,7 +401,7 @@ It displays:
 
 The On-Screen Search Bar is used to search visible contents of the [Graph View](#graph-view) and [Code View](#code-view). It gets displayed at the bottom of the [Main Window](#main-window) when using the [Find On-Screen](#shortcuts) action.
 
-!["Onscreen Search Bar"](img/onscreen_search_bar.png "Onscreen Search Bar")
+!["Onscreen Search Bar"](docs/documentation/img/onscreen_search_bar.png "Onscreen Search Bar")
 
 **Interactions:**
 
@@ -416,7 +416,7 @@ The On-Screen Search Bar is used to search visible contents of the [Graph View](
 
 On every start of Sourcetrail you are shown the start window. It allows for creating new projects or opening existing ones.
 
-!["Start Window"](img/start_window.png "Start Window")
+!["Start Window"](docs/documentation/img/start_window.png "Start Window")
 
 **Interactions:**
 
@@ -433,7 +433,7 @@ The Path List Box is a user interface element that is used within the [Preferenc
 If you want to use environment variables you can use either of the following notations.
 `${VARIABLE_NAME}` or `%VARIABLE_NAME%`
 
-!["Path List Box"](img/path_list_box.png "Path List Box")
+!["Path List Box"](docs/documentation/img/path_list_box.png "Path List Box")
 
 **Interactions:**
 
@@ -449,7 +449,7 @@ If you want to use environment variables you can use either of the following not
 
 By pressing the pen icon in the bottom right corner you can open the plain text edition dialog. It allows you to edit the whole list within a text field. Each line will be one list item.
 
-!["Path List Box Edit"](img/path_list_box_edit.png "Path List Box Edit")
+!["Path List Box Edit"](docs/documentation/img/path_list_box_edit.png "Path List Box Edit")
 
 **Interactions:**
 
@@ -461,7 +461,7 @@ By pressing the pen icon in the bottom right corner you can open the plain text 
 
 The Preferences window lets you define settings for all projects. You can open the Preferences from the menu via [Edit/Preferences](#edit).
 
-!["Preferences Screen"](img/preferences_screen.png "Preferences Screen")
+!["Preferences Screen"](docs/documentation/img/preferences_screen.png "Preferences Screen")
 
 | Setting | Description
 | --- | ---
@@ -496,7 +496,7 @@ The Project Setup Wizard lets you create a new Sourcetrail project. It allows fo
 
 For detailed information continue at [PROJECT SETUP](#project-setup).
 
-!["Project Setup Wizard Start"](img/project_setup_wizard_start.png "Project Setup Wizard Start")
+!["Project Setup Wizard Start"](docs/documentation/img/project_setup_wizard_start.png "Project Setup Wizard Start")
 
 ### Indexing Dialogs
 
@@ -516,7 +516,7 @@ This dialog displays the number of files for indexing and clearing before indexi
 
 For Python projects a checkbox **Shallow Python Indexing** is additionally displayed. When checked, references within your code base (calls, usages, etc.) are resolved by name, which is imprecise but much faster than in-depth indexing. Use this option for a quick first indexing pass and start browsing the code base while running a second pass for in-depth indexing.
 
-!["Start Indexing Dialog"](img/start_indexing_dialog.png "Start Indexing Dialog")
+!["Start Indexing Dialog"](docs/documentation/img/start_indexing_dialog.png "Start Indexing Dialog")
 
 **Interactions:**
 
@@ -528,7 +528,7 @@ For Python projects a checkbox **Shallow Python Indexing** is additionally displ
 
 This dialog shows that Sourcetrail is currently doing processing that can't be interrupted.
 
-!["Progress Dialog"](img/progress_dialog.png "Progress Dialog")
+!["Progress Dialog"](docs/documentation/img/progress_dialog.png "Progress Dialog")
 
 **Interactions:**
 
@@ -538,7 +538,7 @@ This dialog shows that Sourcetrail is currently doing processing that can't be i
 
 This dialog shows the indexing progress of your project, by displaying the number of already indexed files, the last file that was started indexing, the number of errors and a progress estimate in percent.
 
-!["Indexing Dialog"](img/indexing_dialog.png "Indexing Dialog")
+!["Indexing Dialog"](docs/documentation/img/indexing_dialog.png "Indexing Dialog")
 
 **Interactions:**
 
@@ -549,13 +549,13 @@ This dialog shows the indexing progress of your project, by displaying the numbe
 
 This dialog is shown after indexing finished, giving you information about indexed files, duration and errors.
 
-!["Finished Indexing Dialog"](img/finished_indexing_dialog.png "Finished Indexing Dialog")
+!["Finished Indexing Dialog"](docs/documentation/img/finished_indexing_dialog.png "Finished Indexing Dialog")
 
 #### Interrupted Indexing Dialog
 
 This dialog is shown after indexing was stopped, giving you information about indexed files, duration and errors. You can choose to either use the new index or continue using the old one.
 
-!["Interrupted Indexing Dialog"](img/finished_indexing_dialog.png "Interrupted Indexing Dialog")
+!["Interrupted Indexing Dialog"](docs/documentation/img/finished_indexing_dialog.png "Interrupted Indexing Dialog")
 
 **Interactions:**
 
@@ -753,7 +753,7 @@ This dialog is shown after indexing was stopped, giving you information about in
 ## Graph View
 The graph view visualizes the currently selected symbol and all its relationships to other symbols as an interactive graph visualization. You can also display whole call graphs, inheritance chains or include trees by using the toolbar in the top left. Read more about that at [Custom Trail](#custom-trail).
 
-!["Graph View"](img/graph_view.png "Graph View")
+!["Graph View"](docs/documentation/img/graph_view.png "Graph View")
 
 #### Interactions:
 
@@ -802,17 +802,17 @@ Colors are corresponding to the default color scheme.
 
 | Node Type | Image
 | --- | ---
-| **File**: Non-indexed files are files that are not part of any source group and therefore have not been indexed by Sourcetrail's indexer. Incomplete files produced errors during indexing or where part of an indexer run with errors. | !["Node File"](img/node_file.png "Node File")
-| **Macro** | !["Node Macro"](img/node_macro.png "Node Macro")
-| **Namespace, Package & Module** | !["Node Namespace"](img/node_namespace.png "Node Namespace")
-| **Class & Struct**: Display their members nested, and separated by access type: public, protected, private. By default only members with edges are shown. The arrow icon allows to expand and collapse them. The number tells how many nodes are hidden. | !["Node Class"](img/node_class.png "Node Class")
-| **Type** | !["Node Type"](img/node_type.png "Node Type")
-| **Typedef** | !["Node Typedef"](img/node_typedef.png "Node Typedef")
-| **Variable & Field** | !["Node Variable"](img/node_variable.png "Node Variable")
-| **Function & Method** | !["Node Function"](img/node_function.png "Node Function")
-| **Enum & Enum Constant** | !["Node Enum"](img/node_enum.png "Node Enum")
-| **Bundle**: A bundle node combines multiple nodes to reduce the size of the graph visualization. The name describes what kind of nodes are bundled. The number tells how many nodes are bundled. | !["Node Bundle"](img/node_bundle.png "Node Bundle")
-| **Group: A group node shows that all contained nodes share something in common e.g. same file or namespace. | !["Node Group"](img/node_group.png "Node Group")
+| **File**: Non-indexed files are files that are not part of any source group and therefore have not been indexed by Sourcetrail's indexer. Incomplete files produced errors during indexing or where part of an indexer run with errors. | !["Node File"](docs/documentation/img/node_file.png "Node File")
+| **Macro** | !["Node Macro"](docs/documentation/img/node_macro.png "Node Macro")
+| **Namespace, Package & Module** | !["Node Namespace"](docs/documentation/img/node_namespace.png "Node Namespace")
+| **Class & Struct**: Display their members nested, and separated by access type: public, protected, private. By default only members with edges are shown. The arrow icon allows to expand and collapse them. The number tells how many nodes are hidden. | !["Node Class"](docs/documentation/img/node_class.png "Node Class")
+| **Type** | !["Node Type"](docs/documentation/img/node_type.png "Node Type")
+| **Typedef** | !["Node Typedef"](docs/documentation/img/node_typedef.png "Node Typedef")
+| **Variable & Field** | !["Node Variable"](docs/documentation/img/node_variable.png "Node Variable")
+| **Function & Method** | !["Node Function"](docs/documentation/img/node_function.png "Node Function")
+| **Enum & Enum Constant** | !["Node Enum"](docs/documentation/img/node_enum.png "Node Enum")
+| **Bundle**: A bundle node combines multiple nodes to reduce the size of the graph visualization. The name describes what kind of nodes are bundled. The number tells how many nodes are bundled. | !["Node Bundle"](docs/documentation/img/node_bundle.png "Node Bundle")
+| **Group: A group node shows that all contained nodes share something in common e.g. same file or namespace. | !["Node Group"](docs/documentation/img/node_group.png "Node Group")
 
 **Interactions:**
 
@@ -827,15 +827,15 @@ Colors are corresponding to the default color scheme.
 
 | Edge Type | Image
 | --- | ---
-| **File Include** | !["Edge Include"](img/edge_include.png "Edge Include")
-| **Type Use** | !["Edge Use"](img/edge_type_usage.png "Edge Use")
-| **Variable Use** | !["Edge Variable Use"](img/edge_variable_use.png "Edge Variable Use")
-| **Function Call** | !["Edge Call"](img/edge_call.png "Edge Call")
-| **Inheritance** | !["Edge Inheritance"](img/edge_inheritance.png "Edge Inheritance")
-| **Method Override** | !["Edge Override"](img/edge_override.png "Edge Override")
-| **Template Specialization & Template Argument Use** | !["Edge Template Param"](img/edge_template_param.png "Edge Template Param")
-| **Template Member Specialization** | !["Edget Template Member Specialization"](img/edge_template_member_specialization.png "Edget Template Member Specialization")
-| **Bundled Edges**: Bundles multiple edges between the child nodes of the 2 nodes. The thickness gives an impression of how many edges are bundled. Hover the edge to get the number of bundled edges. | !["Edge Bunled Edges"](img/edge_bundled_edges.png "Edge Bunled Edges")
+| **File Include** | !["Edge Include"](docs/documentation/img/edge_include.png "Edge Include")
+| **Type Use** | !["Edge Use"](docs/documentation/img/edge_type_usage.png "Edge Use")
+| **Variable Use** | !["Edge Variable Use"](docs/documentation/img/edge_variable_use.png "Edge Variable Use")
+| **Function Call** | !["Edge Call"](docs/documentation/img/edge_call.png "Edge Call")
+| **Inheritance** | !["Edge Inheritance"](docs/documentation/img/edge_inheritance.png "Edge Inheritance")
+| **Method Override** | !["Edge Override"](docs/documentation/img/edge_override.png "Edge Override")
+| **Template Specialization & Template Argument Use** | !["Edge Template Param"](docs/documentation/img/edge_template_param.png "Edge Template Param")
+| **Template Member Specialization** | !["Edget Template Member Specialization"](docs/documentation/img/edge_template_member_specialization.png "Edget Template Member Specialization")
+| **Bundled Edges**: Bundles multiple edges between the child nodes of the 2 nodes. The thickness gives an impression of how many edges are bundled. Hover the edge to get the number of bundled edges. | !["Edge Bunled Edges"](docs/documentation/img/edge_bundled_edges.png "Edge Bunled Edges")
 
 **Interactions:**
 
@@ -846,7 +846,7 @@ Colors are corresponding to the default color scheme.
 ### Custom Trail
 Using the toolbar in the top left you can display whole call graphs, inheritance chains or include trees for the currently active symbol if the right symbol type is currently active. Or you can use the Custom Trail Dialog to display graphs based on custom criteria.
 
-!["Call Graph"](img/call_graph.png "Call Graph")
+!["Call Graph"](docs/documentation/img/call_graph.png "Call Graph")
 
 **Interactions:**
 
@@ -861,7 +861,7 @@ Using the toolbar in the top left you can display whole call graphs, inheritance
 #### Custom Trail Dialog
 The Custom Trail Dialog can be accessed within the trail controls in the top left of the graph view. It allows to display Custom Trails based on certain criteria.
 
-!["Custom Trail"](img/custom_trail.png "Custom Trail")
+!["Custom Trail"](docs/documentation/img/custom_trail.png "Custom Trail")
 
 Every Custom Trail has a specific Start Symbol, then 1 of 3 different modes can be chosen:
 
@@ -892,19 +892,19 @@ Additional options allow defining which information should be shown:
 
 Using grouping buttons in the top left you can specify if nodes in the graph shall be grouped by either namespace/package or defining file.
 
-!["Grouping Buttons"](img/grouping_buttons.png "Grouping Buttons")
+!["Grouping Buttons"](docs/documentation/img/grouping_buttons.png "Grouping Buttons")
 
 #### Namespace/Package Grouping
 
 All nodes that belong to the same namespace or package are grouped together in a separate group node.
 
-!["Grouping Namespace"](img/grouping_namespace.png "Grouping Namespace")
+!["Grouping Namespace"](docs/documentation/img/grouping_namespace.png "Grouping Namespace")
 
 #### File Grouping
 
 All nodes defined in the same source or header file are grouped together in a separate group node.
 
-!["Grouping File"](img/grouping_file.png "Grouping File")
+!["Grouping File"](docs/documentation/img/grouping_file.png "Grouping File")
 
 **Interactions:**
 
@@ -915,13 +915,13 @@ All nodes defined in the same source or header file are grouped together in a se
 
 Click the `?` button in the bottom right corner of the graph view or enter the keyword `legend` in the [search field](#search-bar) to show the graph legend. It gives you an overview on the different node and edge types and provides examples of graph layouts.
 
-!["Graph Legend"](img/graph_legend.png "Graph Legend")
+!["Graph Legend"](docs/documentation/img/graph_legend.png "Graph Legend")
 
 ## Code View
 
 The code view displays the corresponding source code of the currently selected symbols. The code view has two modes. In list mode it contains a list of one or more files. In single file mode it shows one full source file at a time.
 
-!["Code View"](img/code_view.png "Code View")
+!["Code View"](docs/documentation/img/code_view.png "Code View")
 
 **Interactions:**
 
@@ -930,7 +930,7 @@ The code view displays the corresponding source code of the currently selected s
 * Switch between Snippet List and Single File mode with the `mode selection` in the upper right corner.
 * Scroll up and down to see the different source files.
 
-!["Code View Show Errors"](img/code_view_show_errors.png "Code View Show Errors")
+!["Code View Show Errors"](docs/documentation/img/code_view_show_errors.png "Code View Show Errors")
 
 If a viewed file had errors during indexing, its file icon will contain an `x` and there is a `Show Errors`-button visible in the files title bar. Clicking one `Show Errors` will show you only the errors that cause this specific file to be incomplete in the [Errors Tab](#errors-tab).
 
@@ -944,11 +944,11 @@ Each file has a title bar with the file's name. Clicking the title bar will chan
 
 * **Minimized:** The file does not show its content.
 
-!["Snippet Minimized"](img/snippet_minimized.png "Snippet Minimized")
+!["Snippet Minimized"](docs/documentation/img/snippet_minimized.png "Snippet Minimized")
 
 * **Snippets:** The file displays the snippets containing active locations separated by lines.
 
-!["Snippet Snippets"](img/snippet_snippets.png "Snippet Snippets")
+!["Snippet Snippets"](docs/documentation/img/snippet_snippets.png "Snippet Snippets")
 
 **Interactions:**
 
@@ -962,7 +962,7 @@ Each file has a title bar with the file's name. Clicking the title bar will chan
 
 A code snippet contains the lines of interest for the currently active symbol surrounded by some more lines to provide some context. Other symbols that were indexed by Sourcetrail are framed by a box when hovered. Here Sourcetrail distinguishes between local symbols and symbols that can be related to any other part of the code base. In case the snippet is part of a class, function or namespace, an additional line at the top of the snippet provides information about the snippet’s context (e.g. the surrounding scope).
 
-!["Code View Snippet"](img/code_view_snippet.png "Code View Snippet")
+!["Code View Snippet"](docs/documentation/img/code_view_snippet.png "Code View Snippet")
 
 **Interactions:**
 
@@ -974,7 +974,7 @@ A code snippet contains the lines of interest for the currently active symbol su
 
 In single file mode you will only every have one file visible at a time. The first file shown is usually the file containing the definition of the active snippet if available. Other than that the user interface is the same as in [Snippet List Mode](#snippet-list-mode).
 
-!["Code View Single"](img/code_view_single.png "Code View Single")
+!["Code View Single"](docs/documentation/img/code_view_single.png "Code View Single")
 
 **Interactions:**
 
@@ -986,7 +986,7 @@ In single file mode you will only every have one file visible at a time. The fir
 
 The Search View contains the search field and some other related user interface elements.
 
-!["Search View"](img/search_view.png "Search View")
+!["Search View"](docs/documentation/img/search_view.png "Search View")
 
 ### Back, Forward and History
 
@@ -994,8 +994,8 @@ The left `Backward` button lets you undo your last navigation actions (see [Back
 
 The middle button shows a list of the recently active symbol stack. Select a symbol to activate it.
 
-!["Undo Redo View"](img/undo_redo_buttons.png "Undo Redo View")
-!["History List"](img/history_list.png "History List")
+!["Undo Redo View"](docs/documentation/img/undo_redo_buttons.png "Undo Redo View")
+!["History List"](docs/documentation/img/history_list.png "History List")
 
 **Interactions:**
 
@@ -1007,7 +1007,7 @@ The middle button shows a list of the recently active symbol stack. Select a sym
 
 The refresh button allows you to refresh the current project and reindex all updated, added and removed files. To reindex the whole project choose the **Force Refresh** option from the [Edit Menu](#edit).
 
-!["Refresh Button"](img/refresh_button.png "Refresh Button")
+!["Refresh Button"](docs/documentation/img/refresh_button.png "Refresh Button")
 
 **Interactions:**
 
@@ -1018,7 +1018,7 @@ The refresh button allows you to refresh the current project and reindex all upd
 
 Show the overview screen, which gives a summary of the loaded project. The overview screen is shown after the project was loaded. Alternatively use the shortcut [To overview](#shortcuts).
 
-!["Overview Button"](img/overview_button.png "Overview Button")
+!["Overview Button"](docs/documentation/img/overview_button.png "Overview Button")
 
 **Interactions:**
 
@@ -1028,7 +1028,7 @@ Show the overview screen, which gives a summary of the loaded project. The overv
 
 The search bar allows you to enter search requests to find one of Sourcetrail's indexed symbols. It doesn't allow for full text searching across all files so far. The search field allows for most text editing interactions common to text fields. When typing your request the [Autocompletion Popup](#autocompletion-popup) will show you search results matching to your entered string.
 
-!["Search Bar"](img/search_bar.png "Search Bar")
+!["Search Bar"](docs/documentation/img/search_bar.png "Search Bar")
 
 **Interactions:**
 
@@ -1042,7 +1042,7 @@ The search bar allows you to enter search requests to find one of Sourcetrail's 
 
 The Autocompletion Popup displays all [Nodes](#nodes) matching your search request within all indexed symbols. The match results are determined by a fuzzy matching algorithm, that allows you to skip characters. The popup shows which characters in the words are matching and displays their corresponding node color. The node type is displayed on the right.
 
-!["Search View Completion"](img/search_view_completion.png "Search View Completion")
+!["Search View Completion"](docs/documentation/img/search_view_completion.png "Search View Completion")
 
 **Interactions:**
 
@@ -1063,7 +1063,7 @@ Additionally the search view provides specific keywords that select a certain gr
 
 Search for a certain string in all indexed files by putting `?` at the front of your search query. The default full text search is case-insensitive, use `??` to search case-sensitive.
 
-!["Search View Fulltext"](img/search_view_fulltext.png "Search View Fulltext")
+!["Search View Fulltext"](docs/documentation/img/search_view_fulltext.png "Search View Fulltext")
 
 **Interactions:**
 
@@ -1074,7 +1074,7 @@ Search for a certain string in all indexed files by putting `?` at the front of 
 
 The `Bookmark Active Symbol` button on the left opens the [Bookmark Creator](#bookmark-creator) to create a new bookmark. The `Bookmark Manager` button on the right is used to display the [Bookmark Manager](#bookmark-manager) for activating and editing your bookmarks.
 
-!["Bookmark Buttons"](img/bookmark_buttons.png "Bookmark Buttons")
+!["Bookmark Buttons"](docs/documentation/img/bookmark_buttons.png "Bookmark Buttons")
 
 **Interactions:**
 
@@ -1085,7 +1085,7 @@ The `Bookmark Active Symbol` button on the left opens the [Bookmark Creator](#bo
 
 Use the `Bookmark Creator` to create or edit bookmarks.
 
-!["Bookmark Creator"](img/bookmark_creator.png "Bookmark Creator")
+!["Bookmark Creator"](docs/documentation/img/bookmark_creator.png "Bookmark Creator")
 
 | Setting | Description
 | --- | ---
@@ -1102,7 +1102,7 @@ Use the `Bookmark Creator` to create or edit bookmarks.
 
 Use the `Bookmark Manager` to view and activate your bookmarks. Bookmarks are displayed as lines below their respective category. If a bookmark does not have a category it will be placed within the `default` category. The buttons for removing/editing categories or bookmarks are only visible when hovering the respective line. Bookmark information is stored within a separate `.srctrlbm` file next to your `.srctrlprj` project file.
 
-!["Bookmark Manager"](img/bookmark_manager.png "Bookmark Manager")
+!["Bookmark Manager"](docs/documentation/img/bookmark_manager.png "Bookmark Manager")
 
 **Interactions:**
 
@@ -1129,7 +1129,7 @@ view is hidden by default.
 
 This table gives some information about status updates while running Sourcetrail. It can be helpful to figure out why something does not the way it's expected to.
 
-!["Status View Status"](img/status_view_status.png "Status View Status")
+!["Status View Status"](docs/documentation/img/status_view_status.png "Status View Status")
 
 **Interactions:**
 
@@ -1141,7 +1141,7 @@ This table gives some information about status updates while running Sourcetrail
 
 This list shows errors occurred during indexing.
 
-!["Status View Error"](img/status_view_error.png "Status View Error")
+!["Status View Error"](docs/documentation/img/status_view_error.png "Status View Error")
 
 The following information is provided:
 
@@ -1164,7 +1164,7 @@ The following information is provided:
 
 Show information about hovered symbols in the [Graph View](#graph-view) and [Code View](#code-view)
 
-!["Tooltip"](img/tooltip.png "Tooltip")
+!["Tooltip"](docs/documentation/img/tooltip.png "Tooltip")
 
 **The following information is provided:**
 
@@ -1187,7 +1187,7 @@ The Project Setup Wizard lets you create a new Sourcetrail project. It allows fo
 
 After you added Source Groups to your project this dialog allows you to edit their configurations, as well as removing or duplicating them.
 
-!["Project Setup Wizard Start"](img/project_setup_wizard_start.png "Project Setup Wizard Start")
+!["Project Setup Wizard Start"](docs/documentation/img/project_setup_wizard_start.png "Project Setup Wizard Start")
 
 | Setting | Description
 | --- | ---
@@ -1207,7 +1207,7 @@ After you added Source Groups to your project this dialog allows you to edit the
 
 This window is also used when editing the project. You can select a Source Group from the list on the left and edit it's contents then. Additionally you can also set the `active` flag of certain Source Groups to false, so they won't get indexed when refreshing the project.
 
-!["Project Setup Wizard Edit"](img/project_setup_wizard_edit.png "Project Setup Wizard Edit")
+!["Project Setup Wizard Edit"](docs/documentation/img/project_setup_wizard_edit.png "Project Setup Wizard Edit")
 
 **Interactions:**
 
@@ -1219,7 +1219,7 @@ This window is also used when editing the project. You can select a Source Group
 
 When creating a new Source Group you can choose between different methods of setup depending on your project language. Please have a look at our [QUICK START GUIDE](#getting-started) section for help on choosing the right Source Group type.
 
-!["Project Setup Wizard Source Group Type"](img/project_setup_wizard_source_group_type.png "Project Setup Wizard Source Group Type")
+!["Project Setup Wizard Source Group Type"](docs/documentation/img/project_setup_wizard_source_group_type.png "Project Setup Wizard Source Group Type")
 
 **Interactions:**
 
@@ -1270,7 +1270,7 @@ C/C++ Source Groups from Compilation Database offer the following configuration 
 
 If you are using Visual Studio you can export a Compilation Database with our [Visual Studio Plugin](#visual-studio) and use it to create a project with Sourcetrail.
 
-!["Project Setup Wizard Visual Studio"](img/project_setup_wizard_visual_studio.png "Project Setup Wizard Visual Studio")
+!["Project Setup Wizard Visual Studio"](docs/documentation/img/project_setup_wizard_visual_studio.png "Project Setup Wizard Visual Studio")
 
 **Interactions:**
 
@@ -1400,7 +1400,7 @@ Incoming messages are in the form:
 
 If you want your editor to open a file at a specific location from within Sourcetrail, you can achieve this by either selecting the option `Set IDE Cursor` from the right-click menu in the <a href="#CodeView">Code View]() or by simply clicking into a line in the [Code View](#code-view) while holding down the `Ctrl` or `Cmd` key.
 
-!["Plugin Use In Sourcetrail"](img/plugin_use_in_sourcetrail.png "Plugin Use In Sourcetrail")
+!["Plugin Use In Sourcetrail"](docs/documentation/img/plugin_use_in_sourcetrail.png "Plugin Use In Sourcetrail")
 
 ## To Sourcetrail
 
@@ -1439,7 +1439,7 @@ or `Packages -> Sourcetrail -> Send location to Sourcetrail`
 If you want IntelliJ IDEA/CLion to activate a certain element in Sourcetrail, right-click that element to
 bring up the context menu and choose the “Sent Location” option.
 
-!["Plugin Use In CLion"](img/plugin_use_in_clion.png "Plugin Use In CLion")
+!["Plugin Use In CLion"](docs/documentation/img/plugin_use_in_clion.png "Plugin Use In CLion")
 
 ### Eclipse
 
@@ -1466,7 +1466,7 @@ bring up the context menu and choose the “Sent Location” option.
 
 If you want Eclipse to activate a certain element in Sourcetrail, right-click that element to bring up the context menu and choose the “Set active Token” option.
 
-!["Plugin Use In Eclipse"](img/plugin_use_in_eclipse.png "Plugin Use In Eclipse")
+!["Plugin Use In Eclipse"](docs/documentation/img/plugin_use_in_eclipse.png "Plugin Use In Eclipse")
 
 ### Emacs
 
@@ -1523,7 +1523,7 @@ If you want QtCreator to activate a certain element in Sourcetrail, click a loca
 
 If you want Sublime to activate a certain element in Sourcetrail, click a location to place the cursor, right-click to bring up the context menu and choose the “Sourcetrail - Set active Token” option. Please note that the position of the cursor will be sent to Sourcetrail and not the position you opened the context menu at.
 
-!["Plugin Use In Sublime Text"](img/plugin_use_in_sublime_text.png "Plugin Use In Sublime Text")
+!["Plugin Use In Sublime Text"](docs/documentation/img/plugin_use_in_sublime_text.png "Plugin Use In Sublime Text")
 
 ### Vim
 
@@ -1574,18 +1574,18 @@ or type in the Command Palette: `Sourcetrail: Send Location`
 
 If you want Visual Studio to activate a certain element in Sourcetrail, right-click that element to bring up the context menu and choose the “Set active Token” option.
 
-!["Plugin Use In Visual Studio"](img/plugin_use_in_visual_studio.png "Plugin Use In Visual Studio")
+!["Plugin Use In Visual Studio"](docs/documentation/img/plugin_use_in_visual_studio.png "Plugin Use In Visual Studio")
 
 **Create a Clang Compilation Database from a VS Solution**
 
 As a Clang based tool Sourcetrail supports the JSON Compilation Database format for simplified project setup. This extension enables you to generate a JSON Compilation Database from your Visual Studio projects and solutions. The great news is: This format is independent from the Sourcetrail tool, so you can also use the generated Compilation Database to run other Clang based tools.
 The wizard for creating a Compilation Database is located in the Sourcetrail section in the VS menu bar. Note that the option is only useable if a solution containing at least one C/C++ project is loaded.
 
-!["VS Plugin Menu"](img/vs_plugin_menu.png "VS Plugin Menu")
+!["VS Plugin Menu"](docs/documentation/img/vs_plugin_menu.png "VS Plugin Menu")
 
 In the Compilation Database wizard you can select projects you want to include in the JSON file as well as the desired build target platform and configuration and a number of other options.
 
-!["VS Extension Dialog"](img/vs_extension_dialog.png "VS Extension Dialog")
+!["VS Extension Dialog"](docs/documentation/img/vs_extension_dialog.png "VS Extension Dialog")
 
 | Option | Description
 | --- | ---
@@ -1604,8 +1604,8 @@ Once the Compilation Database was successfully created it can be found in the sp
 **Settings**
 Network settings and logging options can be changed in the plugin's Tools/Options entry.
 
-!["VS Plugin Ports 0"](img/vs_plugin_ports_0.png "VS Plugin Ports 0")
-!["VS Plugin Ports 1"](img/vs_plugin_ports_1.png "VS Plugin Ports 1")
+!["VS Plugin Ports 0"](docs/documentation/img/vs_plugin_ports_0.png "VS Plugin Ports 0")
+!["VS Plugin Ports 1"](docs/documentation/img/vs_plugin_ports_1.png "VS Plugin Ports 1")
 
 | Option | Description
 | --- | ---
@@ -1620,7 +1620,7 @@ Network settings and logging options can be changed in the plugin's Tools/Option
 The plugin offers optional file logging. Should you ever have issues with the plugin we recommend to turn logging on. This will help to pinpoint and resolve the root cause faster.
 Logs will be created in `..\AppData\Local\Coati Software\Plugins\VS` folder. A new log file will be created every time you restart VS and logging is enabled.
 
-!["VS Log Folder"](img/vs_log_folder.png "VS Log Folder")
+!["VS Log Folder"](docs/documentation/img/vs_log_folder.png "VS Log Folder")
 
 Note that the logs will include project names and file names as well as directories specific to your project. If you wish to keep this information secret you can enable [log obfuscation](#vs-plugin-option-obfuscation).
 Project- and file names as well as directories will be replaced by an alphanumeric sequence. The sequence has the form `a0, b0, c0,..., a1, b1, c1,...`. Note that after switching on obfuscation, already logged data **will not be obfuscated retroactively**. No log files will be send to Coati Software automatically. You can check any file you may want to send us for sensible information before sending it.
@@ -1628,7 +1628,7 @@ A dictionary, mapping obfuscated names to original names, will be created in you
 
 Lastly, log messages are also displayed in the VS output window. This is tied to file logging and is not enabled or disabled separately.
 
-!["VS Output Window"](img/vs_output_window.png "VS Output Window")
+!["VS Output Window"](docs/documentation/img/vs_output_window.png "VS Output Window")
 
 ## IDE Communication Protocol
 
