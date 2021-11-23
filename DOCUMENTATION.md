@@ -1,13 +1,10 @@
 !["Sourcetrail"](docs/documentation/logo.png "Sourcetrail")
 
-Documentation for version 2021.1
+Documentation for version 2021.4
 
 # Welcome
 
 This document is the official documentation of Sourcetrail and explains everything you need to know about working with the software.
-
-For questions you may have that are not answered by this document, please send us an e-mail at: [support@sourcetrail.com](mailto:support@sourcetrail.com).
-
 
 ## Overview
 
@@ -235,8 +232,6 @@ For more information, please visit the [Code View Files](#files) section.
 At this point, you should have an understanding of the basics of Sourcetrail's user interface and can begin exploring your codebase. Sourcetrail will allow you to see your source code from a whole new perspective, by giving you a concise overview of its parts and a faster way of drilling down to its internals, while always maintaining the connection to the implementation details of the actual source code.
 
 Please take look at the much more extensive instruction manual below for detailed information.
-
-If you would like to provide feedback, please do not hesitate to reach out to us via email: [support@sourcetrail.com](mailto:support@sourcetrail.com), we'd love to hear from you!
 
 The Sourcetrail team wishes you a good start with our product, lots of saved time, increased productivity and much cleaner code.
 
@@ -1369,7 +1364,6 @@ Custom Command Source Groups offer the following configuration options:
 
 In order to make Sourcetrail the perfect partner for your development workflow you can connect Sourcetrail with different code editors. You can find more information on the plugins in Sourcetrail's download package located in the folder `/ide_plugins`. Have a look at the following list of supported code editors to find out what editors are currently supported.
 
-We are eager to expand the range of supported editors, so if you can't find a plugin for the code editor you are using, please let us know by writing to [support@sourcetrail.com](mailto:support@sourcetrail.com).
 The plugins are Opensource and available on [github](https://github.com/CoatiSoftware/).
 
 **Supported Editors:**
@@ -1688,7 +1682,3 @@ Sourcetrail does two things with the data collected during indexing:
 1. If logging is enabled, some of the data gets logged into a log file saved in [data](#datafolter)/logs. These logs can be useful to us for fixing bugs. We may ask for log information on bug reports, but you should only provide it, if your source code is not confidential.
 
 **Note:** The ` .srctrldb ` file is actually a ` .sqlite ` database file and can be inspected using the [DB Browser for SQLite](https://sqlitebrowser.org/).
-
-### I have further questions, how do I reach you?
-
-If you have further questions, please e-mail us at [mail@coati.io](mailto:mail@coati.io).
