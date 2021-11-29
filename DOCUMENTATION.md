@@ -1,4 +1,4 @@
-!["Sourcetrail"](docs/documentation/logo.png "Sourcetrail")
+<img src="docs/documentation/logo.png" height="100" alt="Sourcetrail">
 
 Documentation for version 2021.4
 
