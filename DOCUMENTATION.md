@@ -169,11 +169,11 @@ All three views display information about the currently selected symbol:
 
 The [Search Field](#search-bar) allows for easy access to all indexed symbols. Use it to find all classes and functions you wish to investigate. In addition, it also holds the UI buttons for navigating [back & forward](#back-&-forward) as well as [refreshing](#refresh).
 
-<img src="docs/documentation/search_view.png" height="100" alt="Search View">
+<img src="docs/documentation/search_view.png" width="800" alt="Search View">
 
 When entering a search query, the [autocompletion popup](#autocompletion-popup) will provide you with a concise list of all matching symbols. Note that Sourcetrail uses a fuzzy matching algorithm, that allows you to skip characters while entering a query.
 
-<img src="docs/documentation/search_view_completion.png" height="400" alt="Search View Completion">
+<img src="docs/documentation/search_view_completion.png" width="800" alt="Search View Completion">
 
 ### 2. Graph Visualization
 
@@ -206,7 +206,7 @@ For a full list on all existing nodes and edges take a look at the integrated [G
 
 The [code view](#code-view) displays all locations of the currently active symbol within the indexed source files. It does not allow for editing the source code. Syntax highlighting is used to increase readability. Source locations that are surrounded by a box when hovered can be clicked to activate the respective symbol. Active source locations are highlighted.
 
-<img src="docs/documentation/code_view.png" height="500" alt="Code View">
+<img src="docs/documentation/code_view.png" width="800" alt="Code View">
 
 The source locations are displayed as code snippets, containing the line of interest and extra lines added to the top and bottom to give information about its context. Code snippets are then bundled together into files.
 
@@ -1037,7 +1037,7 @@ The search bar allows you to enter search requests to find one of Sourcetrail's 
 
 The Autocompletion Popup displays all [Nodes](#nodes) matching your search request within all indexed symbols. The match results are determined by a fuzzy matching algorithm, that allows you to skip characters. The popup shows which characters in the words are matching and displays their corresponding node color. The node type is displayed on the right.
 
-!["Search View Completion"](docs/documentation/search_view_completion.png "Search View Completion")
+<img src="docs/documentation/search_view_completion.png" width="800" alt="Search View Completion">
 
 **Interactions:**
 
@@ -1159,7 +1159,7 @@ The following information is provided:
 
 Show information about hovered symbols in the [Graph View](#graph-view) and [Code View](#code-view)
 
-!["Tooltip"](docs/documentation/tooltip.png "Tooltip")
+<img src="docs/documentation/tooltip.png" width="500" alt="Tooltip">
 
 **The following information is provided:**
 
@@ -1265,7 +1265,7 @@ C/C++ Source Groups from Compilation Database offer the following configuration 
 
 If you are using Visual Studio you can export a Compilation Database with our [Visual Studio Plugin](#visual-studio) and use it to create a project with Sourcetrail.
 
-<img src="docs/documentation/project_setup_wizard_visual_studio.png" width="600" alt="Project Setup Wizard Visual Studio">
+<img src="docs/documentation/project_setup_wizard_visual_studio.png" width="700" alt="Project Setup Wizard Visual Studio">
 
 **Interactions:**
 
