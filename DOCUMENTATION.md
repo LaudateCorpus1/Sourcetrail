@@ -1,4 +1,4 @@
-<img src="docs/documentation/logo.png" height="200" alt="Sourcetrail">
+<img src="docs/documentation/logo.png" height="300" alt="Sourcetrail">
 
 Documentation for version 2021.4
 
@@ -10,7 +10,7 @@ This document is the official documentation of Sourcetrail and explains everythi
 
 Sourcetrail is an interactive source explorer that simplifies navigation in existing source code by indexing your code and gathering data about its structure. Sourcetrail then provides a simple interface consisting of three interactive views, each playing a key role in helping you obtain the information you need:
 
-<img src="docs/documentation/concept.png" height="200" alt="Sourcetrail Concept">
+<img src="docs/documentation/concept.png" height="400" alt="Sourcetrail Concept">
 
 * **Search:** Use the search field to quickly find and select indexed symbols in your source code. The autocompletion box will instantly provide an overview of all matching results throughout your codebase.
 * **Graph:** The graph displays the structure of your source code. It focuses on the currently selected symbol and directly shows all incoming and outgoing dependencies to other symbols.
@@ -54,7 +54,7 @@ After launching Sourcetrail you will see the [Start Window](#start-window). From
 > * Click **New Project** to create a new project.
 > * or select one from the **Recent Projects** _(ex: TicTacToe)_ and continue with the [UI Intro](#ui-intro)
 
-<img src="docs/documentation/start_window.png" height="500" alt="Start Window">
+<img src="docs/documentation/start_window.png" height="600" alt="Start Window">
 
 ## Creating a New Project
 
@@ -64,7 +64,7 @@ When creating a new Sourcetrail project you will use the [Project Setup Wizard](
 > * Give your project a **Name** and select a **Location** for your Sourcetrail project to live.
 > * Click **Add Source Group** to add source files to the project.
 
-<img src="docs/documentation/project_setup_wizard_start.png" height="400" alt="Project Setup Wizard Start">
+<img src="docs/documentation/project_setup_wizard_start.png" height="500" alt="Project Setup Wizard Start">
 
 ### Add Source Group
 
@@ -75,7 +75,7 @@ Scroll past the image for detailed instructions on setting this up.
 > **Tasks:**
 > * Select your chosen **Source Group** setup type and come back here as soon as the project is created.
 
-<img src="docs/documentation/project_setup_wizard_source_group_type.png" height="400" alt="Project Setup Wizard Source Group Type">
+<img src="docs/documentation/project_setup_wizard_source_group_type.png" height="600" alt="Project Setup Wizard Source Group Type">
 
 #### Source Group Setup for C/C++
 
@@ -92,19 +92,19 @@ Exporting a Compilation Database:
 
 If you managed to export a `compile_commands.json` file, then please continue at [Create a Source Group from Compilation Database](#create-a-project-from-compilation-database) and come back after you finished creating the project.
 
-<img src="docs/documentation/project_setup_wizard_start_cdb.png" height="400" alt="Project Setup Wizard Start CDB">
+<img src="docs/documentation/project_setup_wizard_start_cdb.png" height="600" alt="Project Setup Wizard Start CDB">
 
 **Are you using Visual Studio?**
 
 If you are using Visual Studio you can continue at [Source Group creation from Visual Studio](#create-a-project-from-visual-studio) and export a Compilation Database with our [Visual Studio Plugin](#visual-studio).
 
-<img src="docs/documentation/project_setup_wizard_start_vs.png" height="400" alt="Project Setup Wizard Start VS">
+<img src="docs/documentation/project_setup_wizard_start_vs.png" height="600" alt="Project Setup Wizard Start VS">
 
 **Create Empty**
 
 If neither of the above options apply to your project, please continue at [create an empty C/C++ Source Group](#create-an-empty-cxx-project) and return here once the project is created.
 
-<img src="docs/documentation/project_setup_wizard_source_group_type.png" height="400" alt="Project Setup Wizard Source Group Type">
+<img src="docs/documentation/project_setup_wizard_source_group_type.png" height="600" alt="Project Setup Wizard Source Group Type">
 
 #### Source Group Setup for Java
 
@@ -112,19 +112,19 @@ If neither of the above options apply to your project, please continue at [creat
 
 If you are using Gradle you can continue at [Source Group creation from Gradle](#create-a-project-from-gradle-configuration) to automatically setup your Source Group using your Gradle build configuration.
 
-<img src="docs/documentation/project_setup_wizard_start_java_gradle.png" height="400" alt="Project Setup Wizard Start Java Gradle">
+<img src="docs/documentation/project_setup_wizard_start_java_gradle.png" height="600" alt="Project Setup Wizard Start Java Gradle">
 
 **Are you using Maven?**
 
 If you are using Maven please continue at [Source Group creation from Maven](#create-a-project-from-maven-configuration) to automatically setup your Source Group using your Maven build configuration.
 
-<img src="docs/documentation/project_setup_wizard_start_java_maven.png" height="400" alt="Project Setup Wizard Start Java Maven">
+<img src="docs/documentation/project_setup_wizard_start_java_maven.png" height="600" alt="Project Setup Wizard Start Java Maven">
 
 **Create Empty**
 
 If you do not have your project configured using Gradle or Maven, please continue at [Create an Empty Java Source Group](#create-an-empty-java-project) and come back here as soon as the project is created.
 
-<img src="docs/documentation/project_setup_wizard_start_java_empty.png" height="400" alt="Project Setup Wizard Start Java Empty">
+<img src="docs/documentation/project_setup_wizard_start_java_empty.png" height="600" alt="Project Setup Wizard Start Java Empty">
 
 #### Source Group Setup for Python
 
@@ -132,7 +132,7 @@ If you do not have your project configured using Gradle or Maven, please continu
 
 If you want to browse your Python source code with Sourcetrail, please continue at [Create an Empty Python Source Group](#create-an-empty-python-project) and come back here as soon as the project is created.
 
-<img src="docs/documentation/project_setup_wizard_start_python_empty.png" height="400" alt="Project Setup Wizard Start Python Empty">
+<img src="docs/documentation/project_setup_wizard_start_python_empty.png" height="600" alt="Project Setup Wizard Start Python Empty">
 
 ## Source Indexing
 
