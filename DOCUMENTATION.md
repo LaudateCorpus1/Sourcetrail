@@ -169,7 +169,7 @@ All three views display information about the currently selected symbol:
 
 The [Search Field](#search-bar) allows for easy access to all indexed symbols. Use it to find all classes and functions you wish to investigate. In addition, it also holds the UI buttons for navigating [back & forward](#back-&-forward) as well as [refreshing](#refresh).
 
-<img src="docs/documentation/search_view.png" width="800" alt="Search View">
+<img src="docs/documentation/search_view.png" width="750" alt="Search View">
 
 When entering a search query, the [autocompletion popup](#autocompletion-popup) will provide you with a concise list of all matching symbols. Note that Sourcetrail uses a fuzzy matching algorithm, that allows you to skip characters while entering a query.
 
@@ -247,7 +247,7 @@ Download and open the zip file and extract its contents into a temporary folder 
 ## macOS
 Download and open the Sourcetrail.dmg file and drag Sourcetrail.app into the applications folder. You can now launch Sourcetrail from your Applications.
 
-<img src="docs/documentation/installation_mac.png" width="700" alt="Installation macOS">
+<img src="docs/documentation/installation_mac.png" width="800" alt="Installation macOS">
 
 ## Linux
 
@@ -747,7 +747,7 @@ This dialog is shown after indexing was stopped, giving you information about in
 ## Graph View
 The graph view visualizes the currently selected symbol and all its relationships to other symbols as an interactive graph visualization. You can also display whole call graphs, inheritance chains or include trees by using the toolbar in the top left. Read more about that at [Custom Trail](#custom-trail).
 
-<img src="docs/documentation/graph_view.png" width="800" alt="Graph View">
+<img src="docs/documentation/graph_view.png" width="750" alt="Graph View">
 
 #### Interactions:
 
